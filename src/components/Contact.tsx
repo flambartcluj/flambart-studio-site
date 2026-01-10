@@ -6,17 +6,24 @@ export function Contact() {
   const { t, language } = useLanguage();
 
   return (
-    <section id="contact" className="section-padding bg-secondary/50">
-      <div className="container-narrow">
+    <section id="contact" className="section-padding bg-secondary/50 relative overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-20 left-10 w-32 h-32 border border-primary/10 rounded-full" />
+      <div className="absolute bottom-20 right-10 w-24 h-24 border border-primary/10 rounded-full" />
+      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-primary/20 rounded-full" />
+      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/10 rounded-full" />
+      
+      <div className="container-narrow relative">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="caption text-primary mb-4">{t(content.contact.title)}</p>
           <h2 className="heading-md font-display">{t(content.contact.subtitle)}</h2>
+          <div className="w-16 h-px bg-primary mx-auto mt-6" />
         </div>
 
         {/* Contact Info - Centered */}
         <div className="max-w-md mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-6 bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8">
             {/* Email */}
             <a
               href={`mailto:${content.contact.email}`}
@@ -70,7 +77,7 @@ export function Contact() {
           </div>
 
           {/* Response Time */}
-          <p className="text-center text-sm text-muted-foreground mt-12 pt-8 border-t border-border">
+          <p className="text-center text-sm text-muted-foreground mt-10">
             {t(content.contact.responseTime)}
           </p>
         </div>

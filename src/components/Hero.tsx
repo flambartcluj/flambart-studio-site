@@ -3,6 +3,8 @@ import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollTo } from '@/hooks/useScrollTo';
 import { Button } from '@/components/ui/button';
+import heroImage from '@/assets/hero-wedding.jpg';
+import logoWhite from '@/assets/logo-white.png';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -13,28 +15,37 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={content.hero.backgroundImage}
+          src={heroImage}
           alt=""
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-narrow text-center">
         <div className="stagger-children">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src={logoWhite} 
+              alt="Flambart" 
+              className="h-24 md:h-32 lg:h-40 w-auto drop-shadow-lg"
+            />
+          </div>
+
           {/* Caption */}
-          <p className="caption text-primary mb-6">
+          <p className="caption text-white/80 mb-6">
             Photo & Film Studio
           </p>
 
           {/* Headline */}
-          <h1 className="heading-xl font-display mb-6">
+          <h1 className="heading-xl font-display mb-6 text-white">
             {t(content.hero.headline)}
           </h1>
 
           {/* Subheadline */}
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto mb-12">
+          <p className="body-lg text-white/80 max-w-2xl mx-auto mb-12">
             {t(content.hero.subheadline)}
           </p>
 
@@ -51,7 +62,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               onClick={() => scrollTo('portfolio')}
-              className="border-border text-foreground hover:bg-secondary hover:text-foreground px-8 py-6 text-sm tracking-wide uppercase"
+              className="border-white/30 text-white hover:bg-white/10 hover:text-white px-8 py-6 text-sm tracking-wide uppercase backdrop-blur-sm"
             >
               {t(content.hero.ctaSecondary)}
             </Button>
@@ -63,7 +74,7 @@ export function Hero() {
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
         <button
           onClick={() => scrollTo('portfolio')}
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-250"
+          className="flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors duration-250"
           aria-label="Scroll down"
         >
           <span className="caption text-xs">Scroll</span>

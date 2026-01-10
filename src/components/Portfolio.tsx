@@ -40,12 +40,17 @@ export function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="section-padding bg-background">
-      <div className="container-wide">
+    <section id="portfolio" className="section-padding bg-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      
+      <div className="container-wide relative">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
           <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
+          <div className="w-16 h-px bg-primary mx-auto mt-6" />
         </div>
 
         {/* Category Filter */}

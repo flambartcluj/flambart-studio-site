@@ -4,6 +4,8 @@ import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollTo } from '@/hooks/useScrollTo';
 import { cn } from '@/lib/utils';
+import logoBlack from '@/assets/logo-black.png';
+import logoWhite from '@/assets/logo-white.png';
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -49,9 +51,13 @@ export function Header() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="font-display text-2xl tracking-widest text-foreground hover:text-primary transition-colors duration-250"
+            className="hover:opacity-80 transition-opacity duration-250"
           >
-            Flambart
+            <img 
+              src={isScrolled ? logoBlack : logoWhite} 
+              alt="Flambart" 
+              className="h-10 md:h-12 w-auto transition-opacity duration-300"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -60,33 +66,45 @@ export function Header() {
               <button
                 key={item.target}
                 onClick={() => handleNavClick(item.target)}
-                className="text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-250 gold-underline"
+                className={cn(
+                  'text-sm tracking-wide transition-colors duration-250 gold-underline',
+                  isScrolled 
+                    ? 'text-muted-foreground hover:text-foreground' 
+                    : 'text-white/70 hover:text-white'
+                )}
               >
                 {item.label}
               </button>
             ))}
 
             {/* Language Switcher */}
-            <div className="flex items-center gap-1 ml-4 border-l border-border pl-4">
+            <div className={cn(
+              'flex items-center gap-1 ml-4 border-l pl-4',
+              isScrolled ? 'border-border' : 'border-white/30'
+            )}>
               <button
                 onClick={() => setLanguage('ro')}
                 className={cn(
                   'px-2 py-1 text-xs tracking-wider uppercase transition-colors duration-250',
                   language === 'ro'
                     ? 'text-primary font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
+                    : isScrolled 
+                      ? 'text-muted-foreground hover:text-foreground'
+                      : 'text-white/60 hover:text-white'
                 )}
               >
                 RO
               </button>
-              <span className="text-border">/</span>
+              <span className={isScrolled ? 'text-border' : 'text-white/30'}>/</span>
               <button
                 onClick={() => setLanguage('en')}
                 className={cn(
                   'px-2 py-1 text-xs tracking-wider uppercase transition-colors duration-250',
                   language === 'en'
                     ? 'text-primary font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
+                    : isScrolled 
+                      ? 'text-muted-foreground hover:text-foreground'
+                      : 'text-white/60 hover:text-white'
                 )}
               >
                 EN
@@ -97,7 +115,10 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={cn(
+              'md:hidden p-2',
+              isScrolled ? 'text-foreground' : 'text-white'
+            )}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
