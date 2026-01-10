@@ -29,7 +29,7 @@ export function Hero() {
           </p>
 
           {/* Headline */}
-          <h1 className="heading-xl font-serif mb-6">
+          <h1 className="heading-xl font-display mb-6">
             {t(content.hero.headline)}
           </h1>
 

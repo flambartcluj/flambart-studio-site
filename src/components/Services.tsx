@@ -14,7 +14,7 @@ export function Services() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="caption text-primary mb-4">{t(content.services.title)}</p>
-          <h2 className="heading-md font-serif">{t(content.services.subtitle)}</h2>
+          <h2 className="heading-md font-display">{t(content.services.subtitle)}</h2>
         </div>
 
         {/* Service Cards */}
@@ -26,7 +26,7 @@ export function Services() {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Service Title */}
-              <h3 className="heading-sm font-serif text-primary mb-4">
+              <h3 className="heading-sm font-display text-primary mb-4">
                 {t(service.title)}
               </h3>
 

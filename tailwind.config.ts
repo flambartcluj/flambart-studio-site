@@ -66,6 +66,7 @@ export default {
         },
       },
       fontFamily: {
+        display: ["Mavinea", "Georgia", "serif"],
         serif: ["Cormorant Garamond", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },

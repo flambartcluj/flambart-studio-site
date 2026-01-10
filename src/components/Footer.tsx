@@ -16,7 +16,7 @@ export function Footer() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="font-serif text-xl tracking-wider text-foreground hover:text-primary transition-colors duration-250"
+            className="font-display text-xl tracking-widest text-foreground hover:text-primary transition-colors duration-250"
           >
             Flambart
           </a>

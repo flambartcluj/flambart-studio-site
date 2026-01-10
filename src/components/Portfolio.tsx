@@ -45,7 +45,7 @@ export function Portfolio() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
-          <h2 className="heading-md font-serif mb-4">{t(content.portfolio.subtitle)}</h2>
+          <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
         </div>
 
         {/* Category Filter */}
