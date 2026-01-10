@@ -2,6 +2,15 @@
 // All text, portfolio items, and services are managed here
 // Edit this file to update website content
 
+// Import portfolio images
+import portfolioWedding1 from '@/assets/portfolio-wedding-1.jpg';
+import portfolioWedding2 from '@/assets/portfolio-wedding-2.jpg';
+import portfolioWedding3 from '@/assets/portfolio-wedding-3.jpg';
+import portfolioWeddingVideo from '@/assets/portfolio-wedding-video-thumb.jpg';
+import portfolioWedding5 from '@/assets/portfolio-wedding-5.jpg';
+import portfolioEventVideo from '@/assets/portfolio-event-video-thumb.jpg';
+import heroImage from '@/assets/hero-wedding.jpg';
+
 export type Language = 'ro' | 'en';
 
 export interface PortfolioItem {
@@ -127,7 +136,7 @@ export const content: ContentData = {
       ro: 'Vezi portofoliu',
       en: 'View portfolio',
     },
-    backgroundImage: '/placeholder.svg',
+    backgroundImage: heroImage,
   },
   portfolio: {
     title: { ro: 'Portofoliu', en: 'Portfolio' },
@@ -145,7 +154,7 @@ export const content: ContentData = {
       {
         id: 'w1',
         type: 'image',
-        src: '/placeholder.svg',
+        src: portfolioWedding1,
         alt: { ro: 'Nuntă elegantă în natură', en: 'Elegant outdoor wedding' },
         category: 'weddings',
         aspectRatio: 'portrait',
@@ -153,7 +162,7 @@ export const content: ContentData = {
       {
         id: 'w2',
         type: 'image',
-        src: '/placeholder.svg',
+        src: portfolioWedding2,
         alt: { ro: 'Ceremonie de nuntă', en: 'Wedding ceremony' },
         category: 'weddings',
         aspectRatio: 'landscape',
@@ -161,7 +170,7 @@ export const content: ContentData = {
       {
         id: 'w3',
         type: 'image',
-        src: '/placeholder.svg',
+        src: portfolioWedding3,
         alt: { ro: 'Portret de cuplu', en: 'Couple portrait' },
         category: 'weddings',
         aspectRatio: 'portrait',
@@ -169,8 +178,8 @@ export const content: ContentData = {
       {
         id: 'w4',
         type: 'video',
-        src: '/placeholder.svg',
-        thumbnail: '/placeholder.svg',
+        src: portfolioWeddingVideo,
+        thumbnail: portfolioWeddingVideo,
         alt: { ro: 'Film de nuntă', en: 'Wedding film' },
         category: 'weddings',
         aspectRatio: 'landscape',
@@ -178,7 +187,7 @@ export const content: ContentData = {
       {
         id: 'w5',
         type: 'image',
-        src: '/placeholder.svg',
+        src: portfolioWedding5,
         alt: { ro: 'Detalii de nuntă', en: 'Wedding details' },
         category: 'weddings',
         aspectRatio: 'square',
@@ -211,8 +220,8 @@ export const content: ContentData = {
       {
         id: 'e4',
         type: 'video',
-        src: '/placeholder.svg',
-        thumbnail: '/placeholder.svg',
+        src: portfolioEventVideo,
+        thumbnail: portfolioEventVideo,
         alt: { ro: 'Highlight eveniment', en: 'Event highlights' },
         category: 'events',
         aspectRatio: 'landscape',
