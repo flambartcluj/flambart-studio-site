@@ -49,7 +49,7 @@ export function Header() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="font-serif text-2xl tracking-wider text-foreground hover:text-primary transition-colors duration-250"
+            className="font-display text-2xl tracking-widest text-foreground hover:text-primary transition-colors duration-250"
           >
             Flambart
           </a>
@@ -119,7 +119,7 @@ export function Header() {
             <button
               key={item.target}
               onClick={() => handleNavClick(item.target)}
-              className="text-2xl font-serif text-foreground hover:text-primary transition-colors duration-250"
+              className="text-2xl font-display text-foreground hover:text-primary transition-colors duration-250"
             >
               {item.label}
             </button>

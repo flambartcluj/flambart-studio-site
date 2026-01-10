@@ -13,7 +13,7 @@ export function About() {
           <p className="caption text-primary mb-4">{t(content.about.title)}</p>
 
           {/* Main Description */}
-          <p className="heading-md font-serif mb-8 leading-relaxed">
+          <p className="heading-md font-display mb-8 leading-relaxed">
             {t(content.about.description)}
           </p>
 
@@ -35,7 +35,7 @@ export function About() {
                 key={index}
                 className="text-center"
               >
-                <h3 className="font-serif text-xl text-primary mb-3">
+                <h3 className="font-display text-xl text-primary mb-3">
                   {t(value.title)}
                 </h3>
                 <p className="text-sm text-muted-foreground">
