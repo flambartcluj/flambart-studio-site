@@ -19,12 +19,12 @@ export interface PortfolioItem {
   src: string;
   thumbnail?: string;
   alt: { ro: string; en: string };
-  category: 'weddings' | 'events' | 'architecture';
+  category: 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
   aspectRatio?: 'landscape' | 'portrait' | 'square';
 }
 
 export interface ServiceCategory {
-  id: 'weddings' | 'events' | 'architecture';
+  id: 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
   title: { ro: string; en: string };
   description: { ro: string; en: string };
   deliverables: { ro: string[]; en: string[] };
@@ -54,7 +54,9 @@ export interface ContentData {
     subtitle: { ro: string; en: string };
     categories: {
       weddings: { ro: string; en: string };
-      events: { ro: string; en: string };
+      baptisms: { ro: string; en: string };
+      portraits: { ro: string; en: string };
+      corporate: { ro: string; en: string };
       architecture: { ro: string; en: string };
     };
     items: PortfolioItem[];
@@ -146,7 +148,9 @@ export const content: ContentData = {
     },
     categories: {
       weddings: { ro: 'Nunți', en: 'Weddings' },
-      events: { ro: 'Evenimente', en: 'Events' },
+      baptisms: { ro: 'Botezuri', en: 'Baptisms' },
+      portraits: { ro: 'Portrete', en: 'Portraits' },
+      corporate: { ro: 'Corporate & Branding', en: 'Corporate & Branding' },
       architecture: { ro: 'Arhitectură', en: 'Architecture' },
     },
     items: [
@@ -169,14 +173,6 @@ export const content: ContentData = {
       },
       {
         id: 'w3',
-        type: 'image',
-        src: portfolioWedding3,
-        alt: { ro: 'Portret de cuplu', en: 'Couple portrait' },
-        category: 'weddings',
-        aspectRatio: 'portrait',
-      },
-      {
-        id: 'w4',
         type: 'video',
         src: portfolioWeddingVideo,
         thumbnail: portfolioWeddingVideo,
@@ -184,46 +180,64 @@ export const content: ContentData = {
         category: 'weddings',
         aspectRatio: 'landscape',
       },
+      // Baptisms
       {
-        id: 'w5',
+        id: 'b1',
         type: 'image',
-        src: portfolioWedding5,
-        alt: { ro: 'Detalii de nuntă', en: 'Wedding details' },
-        category: 'weddings',
-        aspectRatio: 'square',
-      },
-      // Events
-      {
-        id: 'e1',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Eveniment corporate', en: 'Corporate event' },
-        category: 'events',
-        aspectRatio: 'landscape',
-      },
-      {
-        id: 'e2',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Gala de premiere', en: 'Awards gala' },
-        category: 'events',
+        src: portfolioWedding3,
+        alt: { ro: 'Botez în familie', en: 'Family baptism' },
+        category: 'baptisms',
         aspectRatio: 'portrait',
       },
       {
-        id: 'e3',
+        id: 'b2',
         type: 'image',
         src: '/placeholder.svg',
-        alt: { ro: 'Conferință', en: 'Conference' },
-        category: 'events',
+        alt: { ro: 'Ceremonie de botez', en: 'Baptism ceremony' },
+        category: 'baptisms',
+        aspectRatio: 'landscape',
+      },
+      // Portraits
+      {
+        id: 'p1',
+        type: 'image',
+        src: portfolioWedding5,
+        alt: { ro: 'Portret de familie', en: 'Family portrait' },
+        category: 'portraits',
+        aspectRatio: 'square',
+      },
+      {
+        id: 'p2',
+        type: 'image',
+        src: '/placeholder.svg',
+        alt: { ro: 'Portret individual', en: 'Individual portrait' },
+        category: 'portraits',
+        aspectRatio: 'portrait',
+      },
+      // Corporate & Branding
+      {
+        id: 'c1',
+        type: 'image',
+        src: '/placeholder.svg',
+        alt: { ro: 'Fotografie corporate', en: 'Corporate photography' },
+        category: 'corporate',
         aspectRatio: 'landscape',
       },
       {
-        id: 'e4',
+        id: 'c2',
+        type: 'image',
+        src: '/placeholder.svg',
+        alt: { ro: 'Branding vizual', en: 'Visual branding' },
+        category: 'corporate',
+        aspectRatio: 'portrait',
+      },
+      {
+        id: 'c3',
         type: 'video',
         src: portfolioEventVideo,
         thumbnail: portfolioEventVideo,
-        alt: { ro: 'Highlight eveniment', en: 'Event highlights' },
-        category: 'events',
+        alt: { ro: 'Video corporate', en: 'Corporate video' },
+        category: 'corporate',
         aspectRatio: 'landscape',
       },
       // Architecture
@@ -251,14 +265,6 @@ export const content: ContentData = {
         category: 'architecture',
         aspectRatio: 'square',
       },
-      {
-        id: 'a4',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Design interior', en: 'Interior design' },
-        category: 'architecture',
-        aspectRatio: 'landscape',
-      },
     ],
   },
   services: {
@@ -285,42 +291,78 @@ export const content: ContentData = {
             'Film cinematografic 4K',
             'Sesiune foto pre-nuntă',
             'Galerie online privată',
-            'Album foto premium',
-            'Highlight video 3-5 min',
           ],
           en: [
             'Full-day photography',
             '4K cinematic film',
             'Pre-wedding photo session',
             'Private online gallery',
-            'Premium photo album',
-            '3-5 min highlight video',
           ],
         },
       },
       {
-        id: 'events',
-        title: { ro: 'Evenimente', en: 'Events' },
+        id: 'baptisms',
+        title: { ro: 'Botezuri', en: 'Baptisms' },
         description: {
-          ro: 'De la conferințe la gale, documentăm momentele care definesc brandul tău.',
-          en: 'From conferences to galas, we document the moments that define your brand.',
+          ro: 'Momente sfinte, surprinse cu delicatețe și emoție autentică.',
+          en: 'Sacred moments, captured with delicacy and authentic emotion.',
         },
         deliverables: {
           ro: [
             'Fotografie de eveniment',
-            'Videografie multi-cameră',
-            'Portrete profesionale',
-            'Recap video pentru social media',
-            'Livrare rapidă în 48h',
-            'Drepturi complete de utilizare',
+            'Film cinematic',
+            'Galerie online',
+            'Album foto personalizat',
           ],
           en: [
             'Event photography',
-            'Multi-camera videography',
-            'Professional portraits',
-            'Social media recap video',
-            'Fast delivery in 48h',
-            'Full usage rights',
+            'Cinematic film',
+            'Online gallery',
+            'Personalized photo album',
+          ],
+        },
+      },
+      {
+        id: 'portraits',
+        title: { ro: 'Portrete', en: 'Portraits' },
+        description: {
+          ro: 'Portrete care reflectă personalitatea și esența fiecărei persoane.',
+          en: 'Portraits that reflect the personality and essence of each person.',
+        },
+        deliverables: {
+          ro: [
+            'Sesiune foto în studio sau exterior',
+            'Retușuri profesionale',
+            'Galerie digitală',
+            'Printuri fine art',
+          ],
+          en: [
+            'Studio or outdoor session',
+            'Professional retouching',
+            'Digital gallery',
+            'Fine art prints',
+          ],
+        },
+      },
+      {
+        id: 'corporate',
+        title: { ro: 'Corporate & Branding', en: 'Corporate & Branding' },
+        description: {
+          ro: 'Imagini profesionale pentru identitatea brandului tău.',
+          en: 'Professional imagery for your brand identity.',
+        },
+        deliverables: {
+          ro: [
+            'Headshots profesionale',
+            'Fotografie de produs',
+            'Content pentru social media',
+            'Video de prezentare',
+          ],
+          en: [
+            'Professional headshots',
+            'Product photography',
+            'Social media content',
+            'Presentation video',
           ],
         },
       },
@@ -333,19 +375,15 @@ export const content: ContentData = {
         },
         deliverables: {
           ro: [
-            'Fotografie de interior',
-            'Fotografie de exterior',
+            'Fotografie de interior/exterior',
             'Imagini aeriene cu dronă',
             'Tour virtual 360°',
-            'Retușuri profesionale',
             'Licență comercială',
           ],
           en: [
-            'Interior photography',
-            'Exterior photography',
+            'Interior/exterior photography',
             'Aerial drone imagery',
             '360° virtual tour',
-            'Professional retouching',
             'Commercial license',
           ],
         },

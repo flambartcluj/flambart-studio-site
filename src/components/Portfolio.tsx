@@ -2,19 +2,23 @@ import { useState, useMemo } from 'react';
 import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { content, PortfolioItem } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { cn } from '@/lib/utils';
 
-type Category = 'all' | 'weddings' | 'events' | 'architecture';
+type Category = 'all' | 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
 
 export function Portfolio() {
   const { t, language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [lightboxItem, setLightboxItem] = useState<PortfolioItem | null>(null);
+  const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
 
   const categories: { id: Category; label: string }[] = [
     { id: 'all', label: language === 'ro' ? 'Toate' : 'All' },
     { id: 'weddings', label: t(content.portfolio.categories.weddings) },
-    { id: 'events', label: t(content.portfolio.categories.events) },
+    { id: 'baptisms', label: t(content.portfolio.categories.baptisms) },
+    { id: 'portraits', label: t(content.portfolio.categories.portraits) },
+    { id: 'corporate', label: t(content.portfolio.categories.corporate) },
     { id: 'architecture', label: t(content.portfolio.categories.architecture) },
   ];
 
@@ -40,31 +44,42 @@ export function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="section-padding bg-secondary/30 relative overflow-hidden">
+    <section 
+      ref={sectionRef}
+      id="portfolio" 
+      className="section-padding bg-secondary/30 relative overflow-hidden"
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
       
       <div className="container-wide relative">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className={cn(
+          "text-center mb-16 transition-all duration-700",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        )}>
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
           <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
           <div className="w-16 h-px bg-primary mx-auto mt-6" />
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((cat) => (
+        <div className={cn(
+          "flex flex-wrap justify-center gap-2 mb-12 transition-all duration-700 delay-100",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        )}>
+          {categories.map((cat, index) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={cn(
-                'px-6 py-2 text-sm tracking-wide transition-all duration-250 border',
+                'px-5 py-2 text-sm tracking-wide transition-all duration-300 border rounded-sm',
                 activeCategory === cat.id
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-transparent text-muted-foreground border-border hover:border-primary hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground border-primary scale-105'
+                  : 'bg-transparent text-muted-foreground border-border hover:border-primary hover:text-foreground hover:scale-105'
               )}
+              style={{ transitionDelay: `${index * 50}ms` }}
             >
               {cat.label}
             </button>
@@ -72,21 +87,27 @@ export function Portfolio() {
         </div>
 
         {/* Masonry Grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div className={cn(
+          "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 transition-all duration-700 delay-200",
+          isVisible ? "opacity-100" : "opacity-0"
+        )}>
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="break-inside-avoid group cursor-pointer img-zoom"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={cn(
+                "break-inside-avoid group cursor-pointer img-zoom transition-all duration-500",
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              )}
+              style={{ transitionDelay: `${200 + index * 100}ms` }}
               onClick={() => setLightboxItem(item)}
             >
-              <div className="relative overflow-hidden bg-secondary">
+              <div className="relative overflow-hidden bg-secondary rounded-sm">
                 <img
                   src={item.type === 'video' ? item.thumbnail || item.src : item.src}
                   alt={item.alt[language]}
                   loading="lazy"
                   className={cn(
-                    'w-full object-cover',
+                    'w-full object-cover transition-transform duration-500 group-hover:scale-110',
                     item.aspectRatio === 'portrait' && 'aspect-[3/4]',
                     item.aspectRatio === 'landscape' && 'aspect-[4/3]',
                     item.aspectRatio === 'square' && 'aspect-square',
@@ -95,17 +116,17 @@ export function Portfolio() {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-350 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                   {item.type === 'video' && (
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-350">
+                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                       <Play size={24} className="text-primary-foreground ml-1" />
                     </div>
                   )}
                 </div>
 
                 {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-350">
-                  <p className="text-sm text-foreground">{item.alt[language]}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-sm text-background font-medium">{item.alt[language]}</p>
                 </div>
               </div>
             </div>

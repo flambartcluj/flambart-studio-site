@@ -24,9 +24,9 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 container-narrow text-center">
-        <div className="stagger-children">
+        <div className="space-y-6">
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <img 
               src={logoWhite} 
               alt="Flambart" 
@@ -35,26 +35,26 @@ export function Hero() {
           </div>
 
           {/* Caption */}
-          <p className="caption text-white/80 mb-6">
+          <p className="caption text-white/80 mb-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             Photo & Film Studio
           </p>
 
           {/* Headline */}
-          <h1 className="heading-xl font-display mb-6 text-white">
+          <h1 className="heading-xl font-display mb-6 text-white animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             {t(content.hero.headline)}
           </h1>
 
           {/* Subheadline */}
-          <p className="body-lg text-white/80 max-w-2xl mx-auto mb-12">
+          <p className="body-lg text-white/80 max-w-2xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             {t(content.hero.subheadline)}
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
             <Button
               size="lg"
               onClick={() => scrollTo('contact')}
-              className="btn-premium bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-sm tracking-wide uppercase"
+              className="btn-premium bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-sm tracking-wide uppercase transition-transform duration-300 hover:scale-105"
             >
               {t(content.hero.ctaPrimary)}
             </Button>
@@ -62,7 +62,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               onClick={() => scrollTo('portfolio')}
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white px-8 py-6 text-sm tracking-wide uppercase backdrop-blur-sm"
+              className="border-white/30 text-white hover:bg-white/10 hover:text-white px-8 py-6 text-sm tracking-wide uppercase backdrop-blur-sm transition-transform duration-300 hover:scale-105"
             >
               {t(content.hero.ctaSecondary)}
             </Button>
