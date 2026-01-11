@@ -152,6 +152,12 @@
     }
   }
 
+  /* Animate fade in up with delay support */
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
   /* Stagger children animations */
   .stagger-children > * {
     opacity: 0;
