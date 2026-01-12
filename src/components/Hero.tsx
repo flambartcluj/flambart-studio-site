@@ -62,7 +62,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               onClick={() => scrollTo('portfolio')}
-              className="border-white/50 text-white hover:bg-white hover:text-foreground hover:border-white px-8 py-6 text-sm tracking-wide uppercase backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              className="border-white/50 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary px-8 py-6 text-sm tracking-wide uppercase backdrop-blur-sm transition-all duration-300 hover:scale-105"
             >
               {t(content.hero.ctaSecondary)}
             </Button>
