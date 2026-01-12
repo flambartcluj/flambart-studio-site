@@ -3,10 +3,10 @@
     {
       "id": "w1",
       "type": "image",
-      "filename": "portfolio-wedding-1.jpg",
-      "alt": { "ro": "Nuntă elegantă în natură", "en": "Elegant outdoor wedding" },
+      "filename": "DSC03303.jpg",
+      "alt": { "ro": "Test Romana", "en": "Test Engleza" },
       "category": "weddings",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
       "id": "w2",
@@ -24,6 +24,14 @@
       "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
       "category": "weddings",
       "aspectRatio": "landscape"
+    },
+    {
+      "id": "w4",
+      "type": "image",
+      "filename": "DSC04193.jpg",
+      "alt": { "ro": "Test Romana 2", "en": "Test Engleza2" },
+      "category": "weddings",
+      "aspectRatio": "portrait"
     },
     {
       "id": "b1",
