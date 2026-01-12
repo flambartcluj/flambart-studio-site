@@ -34,6 +34,15 @@
       "aspectRatio": "portrait"
     },
     {
+      "id": "w5",
+      "type": "video",
+      "filename": "timelapse2.mp4",
+      "thumbnail": "portfolio-wedding-video-thumb.jpg",
+      "alt": { "ro": "Film test", "en": "Test film" },
+      "category": "weddings",
+      "aspectRatio": "landscape"
+    },
+    {
       "id": "b1",
       "type": "image",
       "filename": "portfolio-wedding-3.jpg",
