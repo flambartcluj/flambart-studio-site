@@ -1,27 +1,10 @@
 // Flambart Studio - Content Data File
-// All text, portfolio items, and services are managed here
-// Edit this file to update website content
+// Text and services are managed here
+// Portfolio gallery items are managed in /public/gallery.json
 
-// Import portfolio images
-import portfolioWedding1 from '@/assets/portfolio-wedding-1.jpg';
-import portfolioWedding2 from '@/assets/portfolio-wedding-2.jpg';
-import portfolioWedding3 from '@/assets/portfolio-wedding-3.jpg';
-import portfolioWeddingVideo from '@/assets/portfolio-wedding-video-thumb.jpg';
-import portfolioWedding5 from '@/assets/portfolio-wedding-5.jpg';
-import portfolioEventVideo from '@/assets/portfolio-event-video-thumb.jpg';
 import heroImage from '@/assets/hero-wedding.jpg';
 
 export type Language = 'ro' | 'en';
-
-export interface PortfolioItem {
-  id: string;
-  type: 'image' | 'video';
-  src: string;
-  thumbnail?: string;
-  alt: { ro: string; en: string };
-  category: 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
-  aspectRatio?: 'landscape' | 'portrait' | 'square';
-}
 
 export interface ServiceCategory {
   id: 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
@@ -59,7 +42,6 @@ export interface ContentData {
       corporate: { ro: string; en: string };
       architecture: { ro: string; en: string };
     };
-    items: PortfolioItem[];
   };
   services: {
     title: { ro: string; en: string };
@@ -153,119 +135,6 @@ export const content: ContentData = {
       corporate: { ro: 'Corporate & Branding', en: 'Corporate & Branding' },
       architecture: { ro: 'Arhitectură', en: 'Architecture' },
     },
-    items: [
-      // Weddings
-      {
-        id: 'w1',
-        type: 'image',
-        src: portfolioWedding1,
-        alt: { ro: 'Nuntă elegantă în natură', en: 'Elegant outdoor wedding' },
-        category: 'weddings',
-        aspectRatio: 'portrait',
-      },
-      {
-        id: 'w2',
-        type: 'image',
-        src: portfolioWedding2,
-        alt: { ro: 'Ceremonie de nuntă', en: 'Wedding ceremony' },
-        category: 'weddings',
-        aspectRatio: 'landscape',
-      },
-      {
-        id: 'w3',
-        type: 'video',
-        src: portfolioWeddingVideo,
-        thumbnail: portfolioWeddingVideo,
-        alt: { ro: 'Film de nuntă', en: 'Wedding film' },
-        category: 'weddings',
-        aspectRatio: 'landscape',
-      },
-      // Baptisms
-      {
-        id: 'b1',
-        type: 'image',
-        src: portfolioWedding3,
-        alt: { ro: 'Botez în familie', en: 'Family baptism' },
-        category: 'baptisms',
-        aspectRatio: 'portrait',
-      },
-      {
-        id: 'b2',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Ceremonie de botez', en: 'Baptism ceremony' },
-        category: 'baptisms',
-        aspectRatio: 'landscape',
-      },
-      // Portraits
-      {
-        id: 'p1',
-        type: 'image',
-        src: portfolioWedding5,
-        alt: { ro: 'Portret de familie', en: 'Family portrait' },
-        category: 'portraits',
-        aspectRatio: 'square',
-      },
-      {
-        id: 'p2',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Portret individual', en: 'Individual portrait' },
-        category: 'portraits',
-        aspectRatio: 'portrait',
-      },
-      // Corporate & Branding
-      {
-        id: 'c1',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Fotografie corporate', en: 'Corporate photography' },
-        category: 'corporate',
-        aspectRatio: 'landscape',
-      },
-      {
-        id: 'c2',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Branding vizual', en: 'Visual branding' },
-        category: 'corporate',
-        aspectRatio: 'portrait',
-      },
-      {
-        id: 'c3',
-        type: 'video',
-        src: portfolioEventVideo,
-        thumbnail: portfolioEventVideo,
-        alt: { ro: 'Video corporate', en: 'Corporate video' },
-        category: 'corporate',
-        aspectRatio: 'landscape',
-      },
-      // Architecture
-      {
-        id: 'a1',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Interior modern', en: 'Modern interior' },
-        category: 'architecture',
-        aspectRatio: 'landscape',
-      },
-      {
-        id: 'a2',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Exterior clădire', en: 'Building exterior' },
-        category: 'architecture',
-        aspectRatio: 'portrait',
-      },
-      {
-        id: 'a3',
-        type: 'image',
-        src: '/placeholder.svg',
-        alt: { ro: 'Detalii arhitecturale', en: 'Architectural details' },
-        category: 'architecture',
-        aspectRatio: 'square',
-      },
-    ],
   },
   services: {
     title: { ro: 'Servicii', en: 'Services' },
