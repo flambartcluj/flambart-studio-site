@@ -1,16 +1,18 @@
 import { useState, useMemo } from 'react';
 import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { content, PortfolioItem } from '@/data/content';
+import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
+import { useGallery, GalleryItem, resolveGalleryUrl } from '@/hooks/useGallery';
 import { cn } from '@/lib/utils';
 
 type Category = 'all' | 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
 
 export function Portfolio() {
   const { t, language } = useLanguage();
+  const { items: galleryItems, isLoading, error } = useGallery();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
-  const [lightboxItem, setLightboxItem] = useState<PortfolioItem | null>(null);
+  const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
 
   const categories: { id: Category; label: string }[] = [
@@ -23,9 +25,9 @@ export function Portfolio() {
   ];
 
   const filteredItems = useMemo(() => {
-    if (activeCategory === 'all') return content.portfolio.items;
-    return content.portfolio.items.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+    if (activeCategory === 'all') return galleryItems;
+    return galleryItems.filter((item) => item.category === activeCategory);
+  }, [activeCategory, galleryItems]);
 
   const currentIndex = lightboxItem
     ? filteredItems.findIndex((item) => item.id === lightboxItem.id)
@@ -42,6 +44,15 @@ export function Portfolio() {
       setLightboxItem(filteredItems[currentIndex + 1]);
     }
   };
+
+  // Get the resolved image URL for an item
+  const getItemSrc = (item: GalleryItem) => resolveGalleryUrl(item.filename);
+  const getItemThumbnail = (item: GalleryItem) => 
+    item.thumbnail ? resolveGalleryUrl(item.thumbnail) : getItemSrc(item);
+
+  if (error) {
+    console.error('Gallery loading error:', error);
+  }
 
   return (
     <section 
@@ -86,52 +97,63 @@ export function Portfolio() {
           ))}
         </div>
 
+        {/* Loading State */}
+        {isLoading && (
+          <div className="text-center py-16">
+            <div className="animate-pulse text-muted-foreground">
+              {language === 'ro' ? 'Se încarcă galeria...' : 'Loading gallery...'}
+            </div>
+          </div>
+        )}
+
         {/* Masonry Grid */}
-        <div className={cn(
-          "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 transition-all duration-700 delay-200",
-          isVisible ? "opacity-100" : "opacity-0"
-        )}>
-          {filteredItems.map((item, index) => (
-            <div
-              key={item.id}
-              className={cn(
-                "break-inside-avoid group cursor-pointer img-zoom transition-all duration-500",
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              )}
-              style={{ transitionDelay: `${200 + index * 100}ms` }}
-              onClick={() => setLightboxItem(item)}
-            >
-              <div className="relative overflow-hidden bg-secondary rounded-sm">
-                <img
-                  src={item.type === 'video' ? item.thumbnail || item.src : item.src}
-                  alt={item.alt[language]}
-                  loading="lazy"
-                  className={cn(
-                    'w-full object-cover transition-transform duration-500 group-hover:scale-110',
-                    item.aspectRatio === 'portrait' && 'aspect-[3/4]',
-                    item.aspectRatio === 'landscape' && 'aspect-[4/3]',
-                    item.aspectRatio === 'square' && 'aspect-square',
-                    !item.aspectRatio && 'aspect-[4/3]'
-                  )}
-                />
+        {!isLoading && (
+          <div className={cn(
+            "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 transition-all duration-700 delay-200",
+            isVisible ? "opacity-100" : "opacity-0"
+          )}>
+            {filteredItems.map((item, index) => (
+              <div
+                key={item.id}
+                className={cn(
+                  "break-inside-avoid group cursor-pointer img-zoom transition-all duration-500",
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                )}
+                style={{ transitionDelay: `${200 + index * 100}ms` }}
+                onClick={() => setLightboxItem(item)}
+              >
+                <div className="relative overflow-hidden bg-secondary rounded-sm">
+                  <img
+                    src={item.type === 'video' ? getItemThumbnail(item) : getItemSrc(item)}
+                    alt={item.alt[language]}
+                    loading="lazy"
+                    className={cn(
+                      'w-full object-cover transition-transform duration-500 group-hover:scale-110',
+                      item.aspectRatio === 'portrait' && 'aspect-[3/4]',
+                      item.aspectRatio === 'landscape' && 'aspect-[4/3]',
+                      item.aspectRatio === 'square' && 'aspect-square',
+                      !item.aspectRatio && 'aspect-[4/3]'
+                    )}
+                  />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  {item.type === 'video' && (
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                      <Play size={24} className="text-primary-foreground ml-1" />
-                    </div>
-                  )}
-                </div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                    {item.type === 'video' && (
+                      <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                        <Play size={24} className="text-primary-foreground ml-1" />
+                      </div>
+                    )}
+                  </div>
 
-                {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-sm text-background font-medium">{item.alt[language]}</p>
+                  {/* Caption */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-sm text-background font-medium">{item.alt[language]}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
@@ -189,7 +211,7 @@ export function Portfolio() {
               </div>
             ) : (
               <img
-                src={lightboxItem.src}
+                src={getItemSrc(lightboxItem)}
                 alt={lightboxItem.alt[language]}
                 className="max-w-full max-h-[85vh] object-contain animate-fade-in-scale"
               />
