@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,6 +14,7 @@ export function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const categories: { id: Category; label: string }[] = [
     { id: 'all', label: language === 'ro' ? 'Toate' : 'All' },
@@ -33,15 +34,53 @@ export function Portfolio() {
     ? filteredItems.findIndex((item) => item.id === lightboxItem.id)
     : -1;
 
+  // Stop and reset video when lightbox closes or item changes
+  const stopVideo = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, []);
+
+  // Handle closing lightbox
+  const closeLightbox = useCallback(() => {
+    stopVideo();
+    setLightboxItem(null);
+  }, [stopVideo]);
+
+  // Handle navigation - stop current video before switching
+  const navigateTo = useCallback((item: GalleryItem) => {
+    stopVideo();
+    setLightboxItem(item);
+  }, [stopVideo]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (!lightboxItem) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        navigateTo(filteredItems[currentIndex - 1]);
+      } else if (e.key === 'ArrowRight' && currentIndex < filteredItems.length - 1) {
+        navigateTo(filteredItems[currentIndex + 1]);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxItem, currentIndex, filteredItems, closeLightbox, navigateTo]);
+
   const handlePrev = () => {
     if (currentIndex > 0) {
-      setLightboxItem(filteredItems[currentIndex - 1]);
+      navigateTo(filteredItems[currentIndex - 1]);
     }
   };
 
   const handleNext = () => {
     if (currentIndex < filteredItems.length - 1) {
-      setLightboxItem(filteredItems[currentIndex + 1]);
+      navigateTo(filteredItems[currentIndex + 1]);
     }
   };
 
@@ -160,12 +199,12 @@ export function Portfolio() {
       {lightboxItem && (
         <div
           className="fixed inset-0 z-50 bg-background/95 backdrop-blur-lg flex items-center justify-center"
-          onClick={() => setLightboxItem(null)}
+          onClick={closeLightbox}
         >
           {/* Close Button */}
           <button
-            onClick={() => setLightboxItem(null)}
-            className="absolute top-6 right-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250"
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250 z-10"
             aria-label="Close lightbox"
           >
             <X size={32} />
@@ -178,7 +217,7 @@ export function Portfolio() {
                 e.stopPropagation();
                 handlePrev();
               }}
-              className="absolute left-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250"
+              className="absolute left-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250 z-10"
               aria-label="Previous image"
             >
               <ChevronLeft size={40} />
@@ -190,7 +229,7 @@ export function Portfolio() {
                 e.stopPropagation();
                 handleNext();
               }}
-              className="absolute right-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250"
+              className="absolute right-6 p-2 text-muted-foreground hover:text-foreground transition-colors duration-250 z-10"
               aria-label="Next image"
             >
               <ChevronRight size={40} />
@@ -199,21 +238,27 @@ export function Portfolio() {
 
           {/* Image/Video */}
           <div
-            className="max-w-5xl max-h-[85vh] mx-auto px-16"
+            className="w-full max-w-5xl max-h-[85vh] mx-auto px-4 sm:px-16"
             onClick={(e) => e.stopPropagation()}
           >
             {lightboxItem.type === 'video' ? (
-              <div className="aspect-video bg-secondary flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <Play size={64} className="mx-auto mb-4" />
-                  <p>Video placeholder</p>
-                </div>
-              </div>
+              <video
+                ref={videoRef}
+                key={lightboxItem.id}
+                src={getItemSrc(lightboxItem)}
+                poster={lightboxItem.thumbnail ? getItemThumbnail(lightboxItem) : undefined}
+                controls
+                autoPlay
+                playsInline
+                className="w-full max-h-[75vh] object-contain rounded-sm bg-black"
+              >
+                {language === 'ro' ? 'Browserul tău nu suportă redarea video.' : 'Your browser does not support video playback.'}
+              </video>
             ) : (
               <img
                 src={getItemSrc(lightboxItem)}
                 alt={lightboxItem.alt[language]}
-                className="max-w-full max-h-[85vh] object-contain animate-fade-in-scale"
+                className="max-w-full max-h-[85vh] object-contain animate-fade-in-scale mx-auto"
               />
             )}
 
