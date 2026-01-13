@@ -3,7 +3,7 @@ import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
-import { useGallery, GalleryItem, resolveGalleryUrl } from '@/hooks/useGallery';
+import { useGallery, GalleryItem, resolveGalleryUrl, getEmbedUrl, getItemThumbnailUrl } from '@/hooks/useGallery';
 import { cn } from '@/lib/utils';
 
 type Category = 'all' | 'weddings' | 'baptisms' | 'portraits' | 'corporate' | 'architecture';
@@ -15,6 +15,7 @@ export function Portfolio() {
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const categories: { id: Category; label: string }[] = [
     { id: 'all', label: language === 'ro' ? 'Toate' : 'All' },
@@ -34,25 +35,39 @@ export function Portfolio() {
     ? filteredItems.findIndex((item) => item.id === lightboxItem.id)
     : -1;
 
-  // Stop and reset video when lightbox closes or item changes
-  const stopVideo = useCallback(() => {
+  // Stop local video playback
+  const stopLocalVideo = useCallback(() => {
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
   }, []);
 
+  // Stop embed playback by clearing iframe src
+  const stopEmbed = useCallback(() => {
+    if (iframeRef.current) {
+      // Setting src to empty stops the video
+      iframeRef.current.src = '';
+    }
+  }, []);
+
+  // Stop all media (local video and embeds)
+  const stopAllMedia = useCallback(() => {
+    stopLocalVideo();
+    stopEmbed();
+  }, [stopLocalVideo, stopEmbed]);
+
   // Handle closing lightbox
   const closeLightbox = useCallback(() => {
-    stopVideo();
+    stopAllMedia();
     setLightboxItem(null);
-  }, [stopVideo]);
+  }, [stopAllMedia]);
 
-  // Handle navigation - stop current video before switching
+  // Handle navigation - stop current media before switching
   const navigateTo = useCallback((item: GalleryItem) => {
-    stopVideo();
+    stopAllMedia();
     setLightboxItem(item);
-  }, [stopVideo]);
+  }, [stopAllMedia]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -84,14 +99,81 @@ export function Portfolio() {
     }
   };
 
-  // Get the resolved image URL for an item
-  const getItemSrc = (item: GalleryItem) => resolveGalleryUrl(item.filename);
-  const getItemThumbnail = (item: GalleryItem) => 
-    item.thumbnail ? resolveGalleryUrl(item.thumbnail) : getItemSrc(item);
+  // Get the resolved source URL for an item (images and local videos only)
+  const getItemSrc = (item: GalleryItem): string => {
+    if (item.type === 'image' || item.type === 'video') {
+      return resolveGalleryUrl(item.filename);
+    }
+    return '';
+  };
+
+  // Check if item is a playable media type (video or embed)
+  const isPlayableMedia = (item: GalleryItem): boolean => {
+    return item.type === 'video' || item.type === 'embed';
+  };
 
   if (error) {
     console.error('Gallery loading error:', error);
   }
+
+  // Render the lightbox content based on item type
+  const renderLightboxContent = (item: GalleryItem) => {
+    switch (item.type) {
+      case 'image':
+        return (
+          <img
+            src={getItemSrc(item)}
+            alt={item.alt[language]}
+            className="max-w-full max-h-[85vh] object-contain animate-fade-in-scale mx-auto"
+          />
+        );
+
+      case 'video':
+        return (
+          <video
+            ref={videoRef}
+            key={item.id}
+            src={getItemSrc(item)}
+            poster={item.thumbnail ? resolveGalleryUrl(item.thumbnail) : undefined}
+            controls
+            autoPlay
+            playsInline
+            className="w-full max-h-[75vh] object-contain rounded-sm bg-black"
+          >
+            {language === 'ro' ? 'Browserul tău nu suportă redarea video.' : 'Your browser does not support video playback.'}
+          </video>
+        );
+
+      case 'embed':
+        const embedUrl = getEmbedUrl(item);
+        if (!embedUrl) {
+          return (
+            <div className="flex items-center justify-center h-64 bg-muted rounded-sm">
+              <p className="text-muted-foreground">
+                {language === 'ro' ? 'Video indisponibil' : 'Video unavailable'}
+              </p>
+            </div>
+          );
+        }
+        return (
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+            <iframe
+              ref={iframeRef}
+              key={item.id}
+              src={embedUrl}
+              className="absolute inset-0 w-full h-full rounded-sm"
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              title={item.alt[language]}
+            />
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
 
   return (
     <section 
@@ -163,7 +245,7 @@ export function Portfolio() {
               >
                 <div className="relative overflow-hidden bg-secondary rounded-sm">
                   <img
-                    src={item.type === 'video' ? getItemThumbnail(item) : getItemSrc(item)}
+                    src={getItemThumbnailUrl(item)}
                     alt={item.alt[language]}
                     loading="lazy"
                     className={cn(
@@ -177,7 +259,7 @@ export function Portfolio() {
 
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                    {item.type === 'video' && (
+                    {isPlayableMedia(item) && (
                       <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                         <Play size={24} className="text-primary-foreground ml-1" />
                       </div>
@@ -236,31 +318,12 @@ export function Portfolio() {
             </button>
           )}
 
-          {/* Image/Video */}
+          {/* Content (Image/Video/Embed) */}
           <div
             className="w-full max-w-5xl max-h-[85vh] mx-auto px-4 sm:px-16"
             onClick={(e) => e.stopPropagation()}
           >
-            {lightboxItem.type === 'video' ? (
-              <video
-                ref={videoRef}
-                key={lightboxItem.id}
-                src={getItemSrc(lightboxItem)}
-                poster={lightboxItem.thumbnail ? getItemThumbnail(lightboxItem) : undefined}
-                controls
-                autoPlay
-                playsInline
-                className="w-full max-h-[75vh] object-contain rounded-sm bg-black"
-              >
-                {language === 'ro' ? 'Browserul tău nu suportă redarea video.' : 'Your browser does not support video playback.'}
-              </video>
-            ) : (
-              <img
-                src={getItemSrc(lightboxItem)}
-                alt={lightboxItem.alt[language]}
-                className="max-w-full max-h-[85vh] object-contain animate-fade-in-scale mx-auto"
-              />
-            )}
+            {renderLightboxContent(lightboxItem)}
 
             {/* Caption */}
             <p className="text-center text-muted-foreground mt-4">

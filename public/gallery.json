@@ -19,7 +19,7 @@
     {
       "id": "w3",
       "type": "video",
-      "filename": "portfolio-wedding-video-thumb.jpg",
+      "filename": "timelapse2.mp4",
       "thumbnail": "portfolio-wedding-video-thumb.jpg",
       "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
       "category": "weddings",
@@ -35,10 +35,10 @@
     },
     {
       "id": "w5",
-      "type": "video",
-      "filename": "timelapse2.mp4",
-      "thumbnail": "portfolio-wedding-video-thumb.jpg",
-      "alt": { "ro": "Film test", "en": "Test film" },
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "dQw4w9WgXcQ",
+      "alt": { "ro": "Video de nuntă YouTube", "en": "Wedding video YouTube" },
       "category": "weddings",
       "aspectRatio": "landscape"
     },
@@ -52,9 +52,11 @@
     },
     {
       "id": "b2",
-      "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Ceremonie de botez", "en": "Baptism ceremony" },
+      "type": "embed",
+      "provider": "vimeo",
+      "videoId": "76979871",
+      "thumbnail": "portfolio-event-video-thumb.jpg",
+      "alt": { "ro": "Video botez Vimeo", "en": "Baptism video Vimeo" },
       "category": "baptisms",
       "aspectRatio": "landscape"
     },
@@ -92,9 +94,9 @@
     },
     {
       "id": "c3",
-      "type": "video",
-      "filename": "portfolio-event-video-thumb.jpg",
-      "thumbnail": "portfolio-event-video-thumb.jpg",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "jNQXAC9IVRw",
       "alt": { "ro": "Video corporate", "en": "Corporate video" },
       "category": "corporate",
       "aspectRatio": "landscape"
