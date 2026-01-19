@@ -296,7 +296,7 @@ export function Portfolio() {
                     : 'bg-transparent text-muted-foreground border-border/60 hover:border-foreground/40 hover:text-foreground'
                 )}
               >
-                {group.label}
+                {group.label[language]}
               </button>
             ))}
           </div>
@@ -323,7 +323,7 @@ export function Portfolio() {
                           : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
                       )}
                     >
-                      {subCat.label}
+                      {subCat.label[language]}
                       {count > 0 && (
                         <span className={cn(
                           "ml-1.5 text-[10px]",
