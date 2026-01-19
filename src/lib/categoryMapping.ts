@@ -1,69 +1,77 @@
 // Category mapping for 2-level portfolio navigation
 // Maps existing JSON categories to the new hierarchical structure
 
+export interface BilingualLabel {
+  ro: string;
+  en: string;
+}
+
 export interface SubCategory {
   id: string;
-  label: string;
+  label: BilingualLabel;
 }
 
 export interface TopGroup {
   id: string;
-  label: string;
+  label: BilingualLabel;
   subCategories: SubCategory[];
 }
 
-// Top-level groups with their subcategories (Romanian labels)
+// Top-level groups with their subcategories (Bilingual: RO + EN)
 export const TOP_GROUPS: TopGroup[] = [
   {
     id: 'all',
-    label: 'Toate',
+    label: { ro: 'Toate', en: 'All' },
     subCategories: [],
   },
   {
-    id: 'events',
-    label: 'Evenimente',
+    id: 'weddings',
+    label: { ro: 'Nunți', en: 'Weddings' },
     subCategories: [
-      { id: 'wedding', label: 'Nuntă' },
-      { id: 'baptism', label: 'Botez' },
-      { id: 'civil', label: 'Stare civilă' },
-      { id: 'coming-of-age', label: 'Majorat' },
-      { id: 'anniversary', label: 'Aniversare' },
+      { id: 'wedding', label: { ro: 'Nuntă', en: 'Wedding' } },
+      { id: 'civil', label: { ro: 'Stare civilă', en: 'Civil ceremony' } },
+      { id: 'save-the-date', label: { ro: 'Save the date', en: 'Save the date' } },
+      { id: 'proposal', label: { ro: 'Proposal / Logodnă', en: 'Proposal / Engagement' } },
+      { id: 'trash-the-dress', label: { ro: 'Trash the dress', en: 'Trash the dress' } },
     ],
   },
   {
-    id: 'wedding-sessions',
-    label: 'Sesiuni conexe nunții',
+    id: 'other-events',
+    label: { ro: 'Alte Evenimente', en: 'Other Events' },
     subCategories: [
-      { id: 'save-the-date', label: 'Save the date' },
-      { id: 'proposal', label: 'Proposal' },
-      { id: 'trash-the-dress', label: 'Trash the dress' },
+      { id: 'baptism', label: { ro: 'Botez', en: 'Baptism' } },
+      { id: 'coming-of-age', label: { ro: 'Majorat', en: 'Coming of age' } },
+      { id: 'anniversary', label: { ro: 'Aniversare', en: 'Anniversary' } },
     ],
   },
   {
-    id: 'portrait-thematic',
-    label: 'Portret & Ședințe tematice',
+    id: 'portrait-personal',
+    label: { ro: 'Portret & Ședințe Personale', en: 'Portrait & Personal Sessions' },
     subCategories: [
-      { id: 'portrait', label: 'Portret' },
-      { id: 'couple', label: 'Cuplu' },
-      { id: 'family', label: 'Familie' },
-      { id: 'baby', label: 'Baby' },
+      { id: 'portrait', label: { ro: 'Portret', en: 'Portrait' } },
+      { id: 'couple', label: { ro: 'Cuplu', en: 'Couple' } },
+      { id: 'family', label: { ro: 'Familie', en: 'Family' } },
+      { id: 'baby', label: { ro: 'Baby', en: 'Baby' } },
+      { id: 'themed-sessions', label: { ro: 'Ședințe tematice', en: 'Themed sessions' } },
     ],
   },
   {
     id: 'corporate-business',
-    label: 'Corporate & Business',
+    label: { ro: 'Corporate & Business', en: 'Corporate & Business' },
     subCategories: [
-      { id: 'portraits-teams', label: 'Portrete & Echipe' },
-      { id: 'business-branding', label: 'Business Branding' },
-      { id: 'corporate-events', label: 'Evenimente Corporate' },
+      { id: 'portraits-teams', label: { ro: 'Portrete & Echipe', en: 'Corporate portraits & teams' } },
+      { id: 'business-branding', label: { ro: 'Business Branding', en: 'Business branding' } },
+      { id: 'corporate-events', label: { ro: 'Evenimente Corporate', en: 'Corporate events' } },
     ],
   },
   {
     id: 'real-estate-architecture',
-    label: 'Real Estate & Arhitectură',
+    label: { ro: 'Imobiliar & Arhitectură', en: 'Real Estate & Architecture' },
     subCategories: [
-      { id: 'real-estate', label: 'Imobiliar' },
-      { id: 'architectural', label: 'Arhitectural' },
+      { id: 'real-estate', label: { ro: 'Imobiliar', en: 'Real estate' } },
+      { id: 'architectural', label: { ro: 'Arhitectural', en: 'Architectural' } },
+      { id: 'virtual-tours', label: { ro: 'Tururi virtuale 360', en: '360 virtual tours' } },
+      { id: 'aerial', label: { ro: 'Imagini aeriene', en: 'Aerial imagery' } },
     ],
   },
 ];
@@ -71,14 +79,15 @@ export const TOP_GROUPS: TopGroup[] = [
 // Maps existing JSON category values to { groupId, subCategoryId }
 // This allows current JSON to work immediately without changes
 export const CATEGORY_MAPPING: Record<string, { groupId: string; subCategoryId: string }> = {
-  weddings: { groupId: 'events', subCategoryId: 'wedding' },
-  baptisms: { groupId: 'events', subCategoryId: 'baptism' },
-  portraits: { groupId: 'portrait-thematic', subCategoryId: 'portrait' },
+  weddings: { groupId: 'weddings', subCategoryId: 'wedding' },
+  baptisms: { groupId: 'other-events', subCategoryId: 'baptism' },
+  portraits: { groupId: 'portrait-personal', subCategoryId: 'portrait' },
   corporate: { groupId: 'corporate-business', subCategoryId: 'portraits-teams' },
   architecture: { groupId: 'real-estate-architecture', subCategoryId: 'architectural' },
 };
 
 // Get the group and subcategory for a gallery item
+// Supports optional subCategory field for fine-grained filtering
 export function getItemGroupAndSubCategory(
   category: string,
   subCategory?: string
@@ -112,4 +121,12 @@ export function getItemsForGroup(groupId: string): string[] {
 export function getSubCategoryIdsForGroup(groupId: string): string[] {
   const group = TOP_GROUPS.find((g) => g.id === groupId);
   return group ? group.subCategories.map((sc) => sc.id) : [];
+}
+
+// Helper to get translated label
+export function getTranslatedLabel(
+  labelObj: BilingualLabel,
+  language: 'ro' | 'en'
+): string {
+  return labelObj[language];
 }
