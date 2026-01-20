@@ -410,18 +410,11 @@ export function Portfolio() {
 
         {/* Masonry Grid */}
         {!isLoading && filteredItems.length > 0 && (
-          <div className={cn(
-            "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 transition-all duration-700 delay-200",
-            isVisible ? "opacity-100" : "opacity-0"
-          )}>
-            {filteredItems.map((item, index) => (
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+            {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className={cn(
-                  "break-inside-avoid group cursor-pointer img-zoom transition-all duration-500",
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-                )}
-                style={{ transitionDelay: `${200 + index * 100}ms` }}
+                className="break-inside-avoid group cursor-pointer img-zoom"
                 onClick={() => setLightboxItem(item)}
               >
                 <div className="relative overflow-hidden bg-secondary rounded-sm">
