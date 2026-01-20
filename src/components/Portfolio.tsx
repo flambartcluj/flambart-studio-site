@@ -284,10 +284,7 @@ export function Portfolio() {
       
       <div className="container-wide relative">
         {/* Header */}
-        <div className={cn(
-          "text-center mb-12 transition-all duration-700",
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        )}>
+        <div className="text-center mb-12">
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
           <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
           <div className="w-16 h-px bg-primary mx-auto mt-6 mb-8" />
@@ -336,10 +333,7 @@ export function Portfolio() {
         </div>
 
         {/* Top Group Filter */}
-        <div className={cn(
-          "mb-4 transition-all duration-700 delay-100",
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        )}>
+        <div className="mb-4">
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {TOP_GROUPS.map((group) => (
               <button
@@ -360,10 +354,7 @@ export function Portfolio() {
 
         {/* Subcategory Filter */}
         {activeGroup !== 'all' && subCategories.length > 0 && (
-          <div className={cn(
-            "mb-10 transition-all duration-500 delay-150",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          )}>
+          <div className="mb-10">
             <div className="flex justify-center">
               <div className="flex gap-2 overflow-x-auto pb-2 px-4 max-w-full scrollbar-hide">
                 {subCategories.map((subCat) => {
