@@ -1,129 +1,245 @@
 {
   "items": [
     {
-      "id": "w1",
+      "id": "wed-01",
       "type": "image",
       "filename": "DSC03303.jpg",
-      "alt": { "ro": "Test Romana", "en": "Test Engleza" },
-      "category": "weddings",
-      "aspectRatio": "landscape"
-    },
-    {
-      "id": "w2",
-      "type": "image",
-      "filename": "portfolio-wedding-2.jpg",
       "alt": { "ro": "Ceremonie de nuntă", "en": "Wedding ceremony" },
       "category": "weddings",
+      "subCategory": "wedding",
       "aspectRatio": "landscape"
     },
     {
-      "id": "w3",
+      "id": "wed-02",
+      "type": "image",
+      "filename": "portfolio-wedding-2.jpg",
+      "alt": { "ro": "Petrecere nuntă", "en": "Wedding party" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-03",
       "type": "video",
       "filename": "timelapse2.mp4",
       "thumbnail": "portfolio-wedding-video-thumb.jpg",
       "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
       "category": "weddings",
+      "subCategory": "wedding",
       "aspectRatio": "landscape"
     },
     {
-      "id": "w4",
-      "type": "image",
-      "filename": "DSC04193.jpg",
-      "alt": { "ro": "Test Romana 2", "en": "Test Engleza2" },
-      "category": "weddings",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "w5",
+      "id": "wed-04",
       "type": "embed",
       "provider": "youtube",
       "videoId": "eeAXriTPutk",
-      "alt": { "ro": "Video de nuntă YouTube", "en": "Wedding video YouTube" },
+      "alt": { "ro": "Video de nuntă", "en": "Wedding video" },
       "category": "weddings",
+      "subCategory": "wedding",
       "aspectRatio": "landscape"
     },
     {
-      "id": "b1",
+      "id": "civil-01",
+      "type": "image",
+      "filename": "DSC04193.jpg",
+      "alt": { "ro": "Ceremonie stare civilă", "en": "Civil ceremony" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "portrait"
+    },
+    {
+      "id": "save-01",
+      "type": "image",
+      "filename": "portfolio-wedding-3.jpg",
+      "alt": { "ro": "Ședință Save the Date", "en": "Save the Date session" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "proposal-01",
+      "type": "image",
+      "filename": "portfolio-wedding-5.jpg",
+      "alt": { "ro": "Cerere în căsătorie", "en": "Marriage proposal" },
+      "category": "weddings",
+      "subCategory": "proposal",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "trash-01",
+      "type": "image",
+      "filename": "portfolio-wedding-1.jpg",
+      "alt": { "ro": "Ședință Trash the Dress", "en": "Trash the Dress session" },
+      "category": "weddings",
+      "subCategory": "trash-the-dress",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-01",
       "type": "image",
       "filename": "portfolio-wedding-3.jpg",
       "alt": { "ro": "Botez în familie", "en": "Family baptism" },
       "category": "baptisms",
+      "subCategory": "baptism",
       "aspectRatio": "portrait"
     },
     {
-      "id": "b2",
+      "id": "bap-02",
       "type": "embed",
       "provider": "vimeo",
       "videoId": "76979871",
       "thumbnail": "portfolio-event-video-thumb.jpg",
-      "alt": { "ro": "Video botez Vimeo", "en": "Baptism video Vimeo" },
+      "alt": { "ro": "Video botez", "en": "Baptism video" },
       "category": "baptisms",
+      "subCategory": "baptism",
       "aspectRatio": "landscape"
     },
     {
-      "id": "p1",
+      "id": "age-01",
+      "type": "image",
+      "filename": "DSC03303.jpg",
+      "alt": { "ro": "Petrecere de majorat", "en": "Coming of age party" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "anni-01",
+      "type": "image",
+      "filename": "portfolio-wedding-2.jpg",
+      "alt": { "ro": "Aniversare 25 ani", "en": "25th anniversary" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "port-01",
       "type": "image",
       "filename": "portfolio-wedding-5.jpg",
+      "alt": { "ro": "Portret profesional", "en": "Professional portrait" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "portrait"
+    },
+    {
+      "id": "couple-01",
+      "type": "image",
+      "filename": "DSC04193.jpg",
+      "alt": { "ro": "Ședință cuplu", "en": "Couple session" },
+      "category": "portraits",
+      "subCategory": "couple",
+      "aspectRatio": "portrait"
+    },
+    {
+      "id": "fam-01",
+      "type": "image",
+      "filename": "portfolio-wedding-1.jpg",
       "alt": { "ro": "Portret de familie", "en": "Family portrait" },
       "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "baby-01",
+      "type": "image",
+      "filename": "portfolio-wedding-3.jpg",
+      "alt": { "ro": "Ședință foto bebeluș", "en": "Baby photo session" },
+      "category": "portraits",
+      "subCategory": "baby",
       "aspectRatio": "square"
     },
     {
-      "id": "p2",
+      "id": "themed-01",
       "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Portret individual", "en": "Individual portrait" },
+      "filename": "DSC03303.jpg",
+      "alt": { "ro": "Ședință tematică", "en": "Themed session" },
       "category": "portraits",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "c1",
-      "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Fotografie corporate", "en": "Corporate photography" },
-      "category": "corporate",
+      "subCategory": "themed-sessions",
       "aspectRatio": "landscape"
     },
     {
-      "id": "c2",
+      "id": "corp-port-01",
       "type": "image",
-      "filename": "placeholder.svg",
+      "filename": "portfolio-wedding-2.jpg",
+      "alt": { "ro": "Portrete echipă", "en": "Team portraits" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "brand-01",
+      "type": "image",
+      "filename": "DSC04193.jpg",
       "alt": { "ro": "Branding vizual", "en": "Visual branding" },
       "category": "corporate",
+      "subCategory": "business-branding",
       "aspectRatio": "portrait"
     },
     {
-      "id": "c3",
+      "id": "corp-event-01",
       "type": "embed",
       "provider": "youtube",
       "videoId": "jNQXAC9IVRw",
-      "alt": { "ro": "Video corporate", "en": "Corporate video" },
+      "alt": { "ro": "Eveniment corporate", "en": "Corporate event" },
       "category": "corporate",
+      "subCategory": "corporate-events",
       "aspectRatio": "landscape"
     },
     {
-      "id": "a1",
+      "id": "real-01",
       "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Interior modern", "en": "Modern interior" },
+      "filename": "portfolio-wedding-5.jpg",
+      "alt": { "ro": "Fotografie imobiliară", "en": "Real estate photography" },
       "category": "architecture",
+      "subCategory": "real-estate",
       "aspectRatio": "landscape"
     },
     {
-      "id": "a2",
+      "id": "arch-01",
       "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Exterior clădire", "en": "Building exterior" },
+      "filename": "DSC03303.jpg",
+      "alt": { "ro": "Fotografie arhitecturală", "en": "Architectural photography" },
       "category": "architecture",
+      "subCategory": "architectural",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arch-02",
+      "type": "image",
+      "filename": "portfolio-wedding-1.jpg",
+      "alt": { "ro": "Detalii arhitecturale", "en": "Architectural details" },
+      "category": "architecture",
+      "subCategory": "architectural",
       "aspectRatio": "portrait"
     },
     {
-      "id": "a3",
-      "type": "image",
-      "filename": "placeholder.svg",
-      "alt": { "ro": "Detalii arhitecturale", "en": "Architectural details" },
+      "id": "tour-01",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "2m6gKALVbLY",
+      "alt": { "ro": "Tur virtual 360", "en": "360 virtual tour" },
       "category": "architecture",
-      "aspectRatio": "square"
+      "subCategory": "virtual-tours",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "aerial-01",
+      "type": "image",
+      "filename": "portfolio-wedding-2.jpg",
+      "alt": { "ro": "Fotografie aeriană", "en": "Aerial photography" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "aerial-02",
+      "type": "video",
+      "filename": "timelapse2.mp4",
+      "thumbnail": "portfolio-wedding-video-thumb.jpg",
+      "alt": { "ro": "Video aerian dronă", "en": "Aerial drone video" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
     }
   ]
 }
