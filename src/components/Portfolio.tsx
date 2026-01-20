@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
-import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Play, X, ChevronLeft, ChevronRight, Image, Film, LayoutGrid } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
@@ -7,11 +7,15 @@ import { useGallery, GalleryItem, resolveGalleryUrl, getEmbedUrl, getItemThumbna
 import { cn } from '@/lib/utils';
 import { TOP_GROUPS, CATEGORY_MAPPING, getItemGroupAndSubCategory } from '@/lib/categoryMapping';
 
+// Media type filter options
+type MediaTypeFilter = 'all' | 'photos' | 'videos';
+
 export function Portfolio() {
   const { t, language } = useLanguage();
   const { items: galleryItems, isLoading, error } = useGallery();
   const [activeGroup, setActiveGroup] = useState<string>('all');
   const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
+  const [mediaTypeFilter, setMediaTypeFilter] = useState<MediaTypeFilter>('all');
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -21,11 +25,21 @@ export function Portfolio() {
   const currentGroup = TOP_GROUPS.find((g) => g.id === activeGroup);
   const subCategories = currentGroup?.subCategories || [];
 
-  // Filter items based on active group and subcategory
+  // Filter items based on active group, subcategory, and media type
   const filteredItems = useMemo(() => {
-    if (activeGroup === 'all') return galleryItems;
+    let items = galleryItems;
 
-    return galleryItems.filter((item) => {
+    // Filter by media type first
+    if (mediaTypeFilter === 'photos') {
+      items = items.filter((item) => item.type === 'image');
+    } else if (mediaTypeFilter === 'videos') {
+      items = items.filter((item) => item.type === 'video' || item.type === 'embed');
+    }
+
+    // Then filter by category/group
+    if (activeGroup === 'all') return items;
+
+    return items.filter((item) => {
       const mapping = getItemGroupAndSubCategory(item.category, (item as any).subCategory);
       if (!mapping) return false;
 
@@ -39,7 +53,7 @@ export function Portfolio() {
 
       return true;
     });
-  }, [activeGroup, activeSubCategory, galleryItems]);
+  }, [activeGroup, activeSubCategory, mediaTypeFilter, galleryItems]);
 
   // Count items per subcategory for the current group
   const subCategoryCounts = useMemo(() => {
@@ -276,7 +290,49 @@ export function Portfolio() {
         )}>
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
           <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
-          <div className="w-16 h-px bg-primary mx-auto mt-6" />
+          <div className="w-16 h-px bg-primary mx-auto mt-6 mb-8" />
+
+          {/* Media Type Toggle */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center bg-muted/50 rounded-full p-1 border border-border/40">
+              <button
+                onClick={() => setMediaTypeFilter('all')}
+                className={cn(
+                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                  mediaTypeFilter === 'all'
+                    ? 'bg-background text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                <LayoutGrid size={16} />
+                <span className="hidden sm:inline">{language === 'ro' ? 'Toate' : 'All'}</span>
+              </button>
+              <button
+                onClick={() => setMediaTypeFilter('photos')}
+                className={cn(
+                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                  mediaTypeFilter === 'photos'
+                    ? 'bg-background text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                <Image size={16} />
+                <span className="hidden sm:inline">{language === 'ro' ? 'Foto' : 'Photos'}</span>
+              </button>
+              <button
+                onClick={() => setMediaTypeFilter('videos')}
+                className={cn(
+                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                  mediaTypeFilter === 'videos'
+                    ? 'bg-background text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                <Film size={16} />
+                <span className="hidden sm:inline">{language === 'ro' ? 'Video' : 'Videos'}</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Top Group Filter */}

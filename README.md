@@ -76,103 +76,173 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/c
 
 ## Gallery Management
 
-The gallery is fully data-driven via `public/gallery.json`. To add new items:
+The gallery is fully data-driven via `public/gallery.json`. Media files are stored in `public/gallery-assets/`.
 
-### Adding an Image
+### Category Structure
 
-1. Upload the image file to `public/gallery-assets/`
-2. Add an entry to `public/gallery.json`:
+The gallery uses a 2-level hierarchical category system with top-level groups and subcategories.
+
+#### Top-Level Groups & Subcategories
+
+| Group | Group ID | Subcategories |
+|-------|----------|---------------|
+| **NUNȚI / WEDDINGS** | `weddings` | `wedding`, `civil`, `save-the-date`, `proposal`, `trash-the-dress` |
+| **ALTE EVENIMENTE / OTHER EVENTS** | `other-events` | `baptism`, `coming-of-age`, `anniversary` |
+| **PORTRET & ȘEDINȚE PERSONALE / PORTRAIT & PERSONAL SESSIONS** | `portrait-personal` | `portrait`, `couple`, `family`, `baby`, `themed-sessions` |
+| **CORPORATE & BUSINESS** | `corporate-business` | `portraits-teams`, `business-branding`, `corporate-events` |
+| **IMOBILIAR & ARHITECTURĂ / REAL ESTATE & ARCHITECTURE** | `real-estate-architecture` | `real-estate`, `architectural`, `virtual-tours`, `aerial` |
+
+#### Subcategory Reference (RO / EN)
+
+**Nunți / Weddings:**
+- `wedding` - Nuntă / Wedding
+- `civil` - Stare civilă / Civil ceremony
+- `save-the-date` - Save the date / Save the date
+- `proposal` - Proposal / Logodnă / Proposal / Engagement
+- `trash-the-dress` - Trash the dress / Trash the dress
+
+**Alte Evenimente / Other Events:**
+- `baptism` - Botez / Baptism
+- `coming-of-age` - Majorat / Coming of age
+- `anniversary` - Aniversare / Anniversary
+
+**Portret & Ședințe Personale / Portrait & Personal Sessions:**
+- `portrait` - Portret / Portrait
+- `couple` - Cuplu / Couple
+- `family` - Familie / Family
+- `baby` - Baby / Baby
+- `themed-sessions` - Ședințe tematice / Themed sessions
+
+**Corporate & Business:**
+- `portraits-teams` - Portrete & Echipe / Corporate portraits & teams
+- `business-branding` - Business Branding / Business branding
+- `corporate-events` - Evenimente Corporate / Corporate events
+
+**Imobiliar & Arhitectură / Real Estate & Architecture:**
+- `real-estate` - Imobiliar / Real estate
+- `architectural` - Arhitectural / Architectural
+- `virtual-tours` - Tururi virtuale 360 / 360 virtual tours
+- `aerial` - Imagini aeriene / Aerial imagery
+
+---
+
+### Adding Gallery Items
+
+#### Required Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Unique identifier for the item |
+| `type` | `"image"` \| `"video"` \| `"embed"` | Media type |
+| `alt` | `{ "ro": "...", "en": "..." }` | Bilingual description |
+| `category` | string | Legacy category: `weddings`, `baptisms`, `portraits`, `corporate`, `architecture` |
+
+#### Optional Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `subCategory` | string | Fine-grained subcategory ID (see table above) |
+| `aspectRatio` | `"landscape"` \| `"portrait"` \| `"square"` | Display aspect ratio |
+| `thumbnail` | string | Poster image filename for videos/embeds |
+| `filename` | string | File name in `gallery-assets/` (for image/video types) |
+| `provider` | `"youtube"` \| `"vimeo"` \| `"other"` | Embed provider (for embed type) |
+| `videoId` | string | Platform-specific video ID (for YouTube/Vimeo) |
+| `embedUrl` | string | Full embed URL (for other providers) |
+
+---
+
+### Examples
+
+#### Adding an Image
 
 ```json
 {
-  "id": "unique-id",
+  "id": "wed-01",
   "type": "image",
-  "filename": "your-image.jpg",
-  "alt": { "ro": "Descriere română", "en": "English description" },
+  "filename": "wedding-ceremony.jpg",
+  "alt": { "ro": "Ceremonie de nuntă", "en": "Wedding ceremony" },
   "category": "weddings",
+  "subCategory": "wedding",
   "aspectRatio": "landscape"
 }
 ```
 
-### Adding a Local Video
-
-1. Upload the video file (`.mp4` or `.webm`) to `public/gallery-assets/`
-2. Optionally upload a thumbnail image
-3. Add an entry:
+#### Adding a Local Video
 
 ```json
 {
-  "id": "unique-id",
+  "id": "wed-video-01",
   "type": "video",
-  "filename": "your-video.mp4",
-  "thumbnail": "video-thumbnail.jpg",
-  "alt": { "ro": "Descriere română", "en": "English description" },
+  "filename": "wedding-highlights.mp4",
+  "thumbnail": "wedding-video-thumb.jpg",
+  "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
   "category": "weddings",
+  "subCategory": "wedding",
   "aspectRatio": "landscape"
 }
 ```
 
-### Adding a YouTube Embed
+#### Adding a YouTube Embed
 
 ```json
 {
-  "id": "unique-id",
+  "id": "wed-yt-01",
   "type": "embed",
   "provider": "youtube",
   "videoId": "dQw4w9WgXcQ",
-  "alt": { "ro": "Descriere română", "en": "English description" },
+  "alt": { "ro": "Video nuntă YouTube", "en": "Wedding video YouTube" },
   "category": "weddings",
+  "subCategory": "wedding",
   "aspectRatio": "landscape"
 }
 ```
 
 The `videoId` is the part after `v=` in a YouTube URL (e.g., `youtube.com/watch?v=dQw4w9WgXcQ`).
 
-### Adding a Vimeo Embed
+#### Adding a Vimeo Embed
 
 ```json
 {
-  "id": "unique-id",
+  "id": "bap-vimeo-01",
   "type": "embed",
   "provider": "vimeo",
   "videoId": "76979871",
-  "thumbnail": "optional-thumbnail.jpg",
-  "alt": { "ro": "Descriere română", "en": "English description" },
+  "thumbnail": "baptism-thumb.jpg",
+  "alt": { "ro": "Video botez Vimeo", "en": "Baptism video Vimeo" },
   "category": "baptisms",
+  "subCategory": "baptism",
   "aspectRatio": "landscape"
 }
 ```
 
 The `videoId` is the numeric ID from the Vimeo URL (e.g., `vimeo.com/76979871`).
 
-### Adding Other Embeds
-
-For other video providers, use the `embedUrl` field:
+#### Adding Other Embeds
 
 ```json
 {
-  "id": "unique-id",
+  "id": "tour-01",
   "type": "embed",
   "provider": "other",
-  "embedUrl": "https://example.com/embed/video",
-  "thumbnail": "thumbnail.jpg",
-  "alt": { "ro": "Descriere română", "en": "English description" },
-  "category": "corporate",
+  "embedUrl": "https://example.com/embed/virtual-tour",
+  "thumbnail": "tour-thumb.jpg",
+  "alt": { "ro": "Tur virtual 360", "en": "360 virtual tour" },
+  "category": "architecture",
+  "subCategory": "virtual-tours",
   "aspectRatio": "landscape"
 }
 ```
 
-### Field Reference
+---
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `id` | Yes | Unique identifier |
-| `type` | Yes | `"image"`, `"video"`, or `"embed"` |
-| `filename` | For image/video | File name in `gallery-assets/` |
-| `provider` | For embed | `"youtube"`, `"vimeo"`, or `"other"` |
-| `videoId` | For YouTube/Vimeo | Platform-specific video ID |
-| `embedUrl` | For other embeds | Full embed URL |
-| `thumbnail` | Optional | Poster image filename |
-| `alt` | Yes | `{ "ro": "...", "en": "..." }` |
-| `category` | Yes | One of: `weddings`, `baptisms`, `portraits`, `corporate`, `architecture` |
-| `aspectRatio` | Optional | `"landscape"`, `"portrait"`, or `"square"` |
+### Backward Compatibility
+
+Items without a `subCategory` field will be automatically mapped:
+
+| `category` value | Maps to Group | Default Subcategory |
+|------------------|---------------|---------------------|
+| `weddings` | Nunți / Weddings | `wedding` |
+| `baptisms` | Alte Evenimente / Other Events | `baptism` |
+| `portraits` | Portret & Ședințe Personale | `portrait` |
+| `corporate` | Corporate & Business | `portraits-teams` |
+| `architecture` | Imobiliar & Arhitectură | `architectural` |
