@@ -136,6 +136,7 @@ export function Header() {
 
             <SheetContent
               side="top"
+              hideCloseButton
               className={cn(
                 'md:hidden p-0',
                 // full-screen panel (prevents bleed-through + ensures separation)

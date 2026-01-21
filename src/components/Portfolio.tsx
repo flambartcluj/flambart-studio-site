@@ -1,11 +1,12 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
-import { Play, X, ChevronLeft, ChevronRight, Image, Film, LayoutGrid } from 'lucide-react';
+import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { useGallery, GalleryItem, resolveGalleryUrl, getEmbedUrl, getItemThumbnailUrl } from '@/hooks/useGallery';
 import { cn } from '@/lib/utils';
-import { TOP_GROUPS, CATEGORY_MAPPING, getItemGroupAndSubCategory } from '@/lib/categoryMapping';
+import { TOP_GROUPS, getItemGroupAndSubCategory } from '@/lib/categoryMapping';
+import { PortfolioFilters } from '@/components/portfolio/PortfolioFilters';
 
 // Media type filter options
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
@@ -284,108 +285,25 @@ export function Portfolio() {
       
       <div className="container-wide relative">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <p className="caption text-primary mb-4">{t(content.portfolio.title)}</p>
           <h2 className="heading-md font-display mb-4">{t(content.portfolio.subtitle)}</h2>
           <div className="w-16 h-px bg-primary mx-auto mt-6 mb-8" />
-
-          {/* Media Type Toggle */}
-          <div className="flex justify-center">
-            <div className="inline-flex items-center bg-muted/50 rounded-full p-1 border border-border/40">
-              <button
-                onClick={() => setMediaTypeFilter('all')}
-                className={cn(
-                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
-                  mediaTypeFilter === 'all'
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <LayoutGrid size={16} />
-                <span className="hidden sm:inline">{language === 'ro' ? 'Toate' : 'All'}</span>
-              </button>
-              <button
-                onClick={() => setMediaTypeFilter('photos')}
-                className={cn(
-                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
-                  mediaTypeFilter === 'photos'
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <Image size={16} />
-                <span className="hidden sm:inline">{language === 'ro' ? 'Foto' : 'Photos'}</span>
-              </button>
-              <button
-                onClick={() => setMediaTypeFilter('videos')}
-                className={cn(
-                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
-                  mediaTypeFilter === 'videos'
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <Film size={16} />
-                <span className="hidden sm:inline">{language === 'ro' ? 'Video' : 'Videos'}</span>
-              </button>
-            </div>
-          </div>
         </div>
 
-        {/* Top Group Filter */}
-        <div className="mb-4">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            {TOP_GROUPS.map((group) => (
-              <button
-                key={group.id}
-                onClick={() => handleGroupChange(group.id)}
-                className={cn(
-                  'px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium tracking-wide rounded-full border transition-all duration-200',
-                  activeGroup === group.id
-                    ? 'bg-foreground text-background border-foreground'
-                    : 'bg-transparent text-muted-foreground border-border/60 hover:border-foreground/40 hover:text-foreground'
-                )}
-              >
-                {group.label[language]}
-              </button>
-            ))}
-          </div>
+        {/* Filters */}
+        <div className="mb-10">
+          <PortfolioFilters
+            activeGroup={activeGroup}
+            activeSubCategory={activeSubCategory}
+            mediaTypeFilter={mediaTypeFilter}
+            subCategories={subCategories}
+            subCategoryCounts={subCategoryCounts}
+            onGroupChange={handleGroupChange}
+            onSubCategoryChange={setActiveSubCategory}
+            onMediaTypeChange={setMediaTypeFilter}
+          />
         </div>
-
-        {/* Subcategory Filter */}
-        {activeGroup !== 'all' && subCategories.length > 0 && (
-          <div className="mb-10">
-            <div className="flex justify-center">
-              <div className="flex gap-2 overflow-x-auto pb-2 px-4 max-w-full scrollbar-hide">
-                {subCategories.map((subCat) => {
-                  const count = subCategoryCounts[subCat.id] || 0;
-                  return (
-                    <button
-                      key={subCat.id}
-                      onClick={() => setActiveSubCategory(subCat.id)}
-                      className={cn(
-                        'px-3 md:px-4 py-1.5 md:py-2 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
-                        activeSubCategory === subCat.id
-                          ? 'bg-primary text-primary-foreground border-primary'
-                          : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
-                      )}
-                    >
-                      {subCat.label[language]}
-                      {count > 0 && (
-                        <span className={cn(
-                          "ml-1.5 text-[10px]",
-                          activeSubCategory === subCat.id ? "text-primary-foreground/70" : "text-muted-foreground/60"
-                        )}>
-                          ({count})
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Loading State */}
         {isLoading && (
