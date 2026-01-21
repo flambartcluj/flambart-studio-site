@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type MouseEvent } from 'react';
 import { Menu, X } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollTo } from '@/hooks/useScrollTo';
 import { cn } from '@/lib/utils';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import logoBlack from '@/assets/logo-black.png';
 import logoWhite from '@/assets/logo-white.png';
 
@@ -31,6 +32,12 @@ export function Header() {
   const handleNavClick = (target: string) => {
     scrollTo(target);
     setIsMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -112,72 +119,113 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn(
-              'md:hidden p-2',
-              isScrolled ? 'text-foreground' : 'text-white'
-            )}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu */}
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <button
+                className={cn(
+                  'md:hidden p-2',
+                  isScrolled ? 'text-foreground' : 'text-white'
+                )}
+                aria-label="Toggle menu"
+                data-testid="mobile-menu-trigger"
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </SheetTrigger>
+
+            <SheetContent
+              side="top"
+              className={cn(
+                'md:hidden p-0',
+                // full-screen panel (prevents bleed-through + ensures separation)
+                'h-[100dvh] w-full',
+                'bg-background text-foreground',
+              )}
+              data-testid="mobile-menu-panel"
+            >
+              <div className="flex h-full flex-col">
+                {/* Top bar (clear separation from page underneath) */}
+                <div className="h-20 border-b border-border bg-background">
+                  <div className="container-wide flex h-full items-center justify-between">
+                    <a
+                      href="#"
+                      onClick={handleLogoClick}
+                      className="hover:opacity-80 transition-opacity duration-250"
+                    >
+                      <img
+                        src={logoBlack}
+                        alt="Flambart"
+                        className="h-10 w-auto"
+                      />
+                    </a>
+
+                    <button
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="p-2 text-foreground"
+                      aria-label="Close menu"
+                      data-testid="mobile-menu-close"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Menu content */}
+                <div className="flex-1 overflow-y-auto">
+                  <div className="container-wide flex h-full flex-col items-center pt-10 pb-8">
+                    {/* Navigation Links */}
+                    <nav className="flex w-full flex-col items-center gap-7">
+                      {navItems.map((item) => (
+                        <button
+                          key={item.target}
+                          onClick={() => handleNavClick(item.target)}
+                          className="text-xl font-display text-foreground hover:text-primary transition-colors duration-250 py-2"
+                          data-testid={`mobile-nav-${item.target}`}
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </nav>
+
+                    {/* Language Switcher */}
+                    <div className="mt-10 w-full border-t border-border pt-6 flex items-center justify-center gap-3">
+                      <button
+                        onClick={() => {
+                          setLanguage('ro');
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
+                          language === 'ro'
+                            ? 'text-primary font-medium bg-primary/10'
+                            : 'text-muted-foreground hover:text-foreground'
+                        )}
+                      >
+                        RO
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('en');
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
+                          language === 'en'
+                            ? 'text-primary font-medium bg-primary/10'
+                            : 'text-muted-foreground hover:text-foreground'
+                        )}
+                      >
+                        EN
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </nav>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-x-0 top-20 bottom-0 z-50 md:hidden bg-background border-t border-border shadow-lg overflow-hidden">
-          {/* Menu content */}
-          <div className="flex flex-col items-center pt-12 px-6 h-full bg-background">
-            {/* Navigation Links */}
-            <nav className="flex flex-col items-center gap-8 w-full">
-              {navItems.map((item) => (
-                <button
-                  key={item.target}
-                  onClick={() => handleNavClick(item.target)}
-                  className="text-xl font-display text-foreground hover:text-primary transition-colors duration-250 py-2"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </nav>
-
-            {/* Language Switcher */}
-            <div className="flex items-center gap-6 mt-12 pt-8 border-t border-border w-full justify-center">
-              <button
-                onClick={() => {
-                  setLanguage('ro');
-                  setIsMobileMenuOpen(false);
-                }}
-                className={cn(
-                  'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
-                  language === 'ro'
-                    ? 'text-primary font-medium bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                Română
-              </button>
-              <button
-                onClick={() => {
-                  setLanguage('en');
-                  setIsMobileMenuOpen(false);
-                }}
-                className={cn(
-                  'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
-                  language === 'en'
-                    ? 'text-primary font-medium bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                English
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
