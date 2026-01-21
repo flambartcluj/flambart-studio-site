@@ -126,53 +126,61 @@ export function Header() {
         </nav>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={cn(
-          'fixed inset-x-0 top-20 bottom-0 z-40 bg-background/98 backdrop-blur-lg md:hidden transition-all duration-350',
-          isMobileMenuOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        )}
-      >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navItems.map((item) => (
-            <button
-              key={item.target}
-              onClick={() => handleNavClick(item.target)}
-              className="text-2xl font-display text-foreground hover:text-primary transition-colors duration-250"
-            >
-              {item.label}
-            </button>
-          ))}
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 top-20 z-50 md:hidden">
+          {/* Solid background to fully cover content */}
+          <div className="absolute inset-0 bg-background" />
+          
+          {/* Menu content */}
+          <div className="relative z-10 flex flex-col items-center pt-16 px-6">
+            {/* Navigation Links */}
+            <nav className="flex flex-col items-center gap-6 w-full">
+              {navItems.map((item) => (
+                <button
+                  key={item.target}
+                  onClick={() => handleNavClick(item.target)}
+                  className="text-xl font-display text-foreground hover:text-primary transition-colors duration-250 py-2"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
 
-          {/* Mobile Language Switcher */}
-          <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border">
-            <button
-              onClick={() => setLanguage('ro')}
-              className={cn(
-                'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250',
-                language === 'ro'
-                  ? 'text-primary font-medium'
-                  : 'text-muted-foreground'
-              )}
-            >
-              Română
-            </button>
-            <button
-              onClick={() => setLanguage('en')}
-              className={cn(
-                'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250',
-                language === 'en'
-                  ? 'text-primary font-medium'
-                  : 'text-muted-foreground'
-              )}
-            >
-              English
-            </button>
+            {/* Language Switcher */}
+            <div className="flex items-center gap-6 mt-12 pt-8 border-t border-border w-full justify-center">
+              <button
+                onClick={() => {
+                  setLanguage('ro');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={cn(
+                  'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
+                  language === 'ro'
+                    ? 'text-primary font-medium bg-primary/10'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                Română
+              </button>
+              <button
+                onClick={() => {
+                  setLanguage('en');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={cn(
+                  'px-4 py-2 text-sm tracking-wider uppercase transition-colors duration-250 rounded-md',
+                  language === 'en'
+                    ? 'text-primary font-medium bg-primary/10'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                English
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
