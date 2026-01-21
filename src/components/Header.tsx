@@ -128,14 +128,11 @@ export function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-20 z-50 md:hidden">
-          {/* Solid background to fully cover content */}
-          <div className="absolute inset-0 bg-background" />
-          
+        <div className="fixed inset-x-0 top-20 bottom-0 z-50 md:hidden bg-background border-t border-border shadow-lg overflow-hidden">
           {/* Menu content */}
-          <div className="relative z-10 flex flex-col items-center pt-16 px-6">
+          <div className="flex flex-col items-center pt-12 px-6 h-full bg-background">
             {/* Navigation Links */}
-            <nav className="flex flex-col items-center gap-6 w-full">
+            <nav className="flex flex-col items-center gap-8 w-full">
               {navItems.map((item) => (
                 <button
                   key={item.target}
