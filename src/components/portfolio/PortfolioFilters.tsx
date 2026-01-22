@@ -1,14 +1,8 @@
-import { useState } from 'react';
-import { ChevronDown, Image, Film, LayoutGrid, Check } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { Image, Film, LayoutGrid } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import { TOP_GROUPS, TopGroup, SubCategory } from '@/lib/categoryMapping';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { TOP_GROUPS, SubCategory } from '@/lib/categoryMapping';
 
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
 
@@ -23,6 +17,66 @@ interface PortfolioFiltersProps {
   onMediaTypeChange: (filter: MediaTypeFilter) => void;
 }
 
+// Reusable scrollable pill container with overflow fade cues
+function ScrollablePillRow({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showLeftFade, setShowLeftFade] = useState(false);
+  const [showRightFade, setShowRightFade] = useState(false);
+
+  const checkOverflow = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const hasOverflow = el.scrollWidth > el.clientWidth;
+    const scrollLeft = el.scrollLeft;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+
+    setShowLeftFade(hasOverflow && scrollLeft > 4);
+    setShowRightFade(hasOverflow && scrollLeft < maxScroll - 4);
+  };
+
+  useEffect(() => {
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [children]);
+
+  return (
+    <div className="relative">
+      {/* Left fade gradient */}
+      <div
+        className={cn(
+          'absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none transition-opacity duration-200',
+          showLeftFade ? 'opacity-100' : 'opacity-0'
+        )}
+      />
+      {/* Right fade gradient */}
+      <div
+        className={cn(
+          'absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none transition-opacity duration-200',
+          showRightFade ? 'opacity-100' : 'opacity-0'
+        )}
+      />
+      <div
+        ref={scrollRef}
+        onScroll={checkOverflow}
+        className={cn(
+          'flex gap-2 overflow-x-auto scrollbar-hide px-1',
+          className
+        )}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function PortfolioFilters({
   activeGroup,
   activeSubCategory,
@@ -34,13 +88,6 @@ export function PortfolioFilters({
   onMediaTypeChange,
 }: PortfolioFiltersProps) {
   const { language } = useLanguage();
-  const [isGroupOpen, setIsGroupOpen] = useState(false);
-
-  const activeGroupData = TOP_GROUPS.find((g) => g.id === activeGroup);
-  const activeGroupLabel = activeGroupData?.label[language] || (language === 'ro' ? 'Toate' : 'All');
-
-  const activeSubCategoryData = subCategories.find((s) => s.id === activeSubCategory);
-  const activeSubCategoryLabel = activeSubCategoryData?.label[language] || '';
 
   return (
     <div className="space-y-4">
@@ -86,42 +133,29 @@ export function PortfolioFilters({
         </div>
       </div>
 
-      {/* Mobile: Dropdown filters */}
+      {/* Mobile: Horizontally scrollable pill rows */}
       <div className="flex md:hidden flex-col gap-3">
-        {/* Category Dropdown */}
-        <DropdownMenu open={isGroupOpen} onOpenChange={setIsGroupOpen}>
-          <DropdownMenuTrigger asChild>
-            <button className="flex items-center justify-between w-full px-4 py-3 bg-muted/30 border border-border/60 rounded-lg text-sm font-medium text-foreground">
-              <span>{activeGroupLabel}</span>
-              <ChevronDown
-                size={18}
-                className={cn(
-                  'text-muted-foreground transition-transform duration-200',
-                  isGroupOpen && 'rotate-180'
-                )}
-              />
+        {/* First-level category pills */}
+        <ScrollablePillRow>
+          {TOP_GROUPS.map((group) => (
+            <button
+              key={group.id}
+              onClick={() => onGroupChange(group.id)}
+              className={cn(
+                'flex-shrink-0 px-4 py-2 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
+                activeGroup === group.id
+                  ? 'bg-foreground text-background border-foreground'
+                  : 'bg-background text-muted-foreground border-border/60 hover:border-foreground/40 hover:text-foreground'
+              )}
+            >
+              {group.label[language]}
             </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="w-[calc(100vw-2rem)] max-w-sm">
-            {TOP_GROUPS.map((group) => (
-              <DropdownMenuItem
-                key={group.id}
-                onClick={() => onGroupChange(group.id)}
-                className={cn(
-                  'flex items-center justify-between py-3',
-                  activeGroup === group.id && 'bg-primary/10'
-                )}
-              >
-                <span>{group.label[language]}</span>
-                {activeGroup === group.id && <Check size={16} className="text-primary" />}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+          ))}
+        </ScrollablePillRow>
 
-        {/* Subcategory Pills - Horizontal scroll */}
+        {/* Second-level subcategory pills */}
         {activeGroup !== 'all' && subCategories.length > 0 && (
-          <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 scrollbar-hide">
+          <ScrollablePillRow>
             {subCategories.map((subCat) => {
               const count = subCategoryCounts[subCat.id] || 0;
               const isActive = activeSubCategory === subCat.id;
@@ -148,7 +182,7 @@ export function PortfolioFilters({
                 </button>
               );
             })}
-          </div>
+          </ScrollablePillRow>
         )}
       </div>
 
