@@ -7,6 +7,8 @@ import { useGallery, GalleryItem, resolveGalleryUrl, getEmbedUrl, getItemThumbna
 import { cn } from '@/lib/utils';
 import { TOP_GROUPS, getItemGroupAndSubCategory } from '@/lib/categoryMapping';
 import { PortfolioFilters } from '@/components/portfolio/PortfolioFilters';
+import { useTouchSwipe } from '@/hooks/useTouchSwipe';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Media type filter options
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
@@ -179,6 +181,13 @@ export function Portfolio() {
       navigateTo(filteredItems[currentIndex + 1]);
     }
   };
+
+  // Mobile swipe gesture support for lightbox
+  const isMobile = useIsMobile();
+  const swipeHandlers = useTouchSwipe({
+    onSwipeLeft: isMobile && lightboxItem ? handleNext : undefined,
+    onSwipeRight: isMobile && lightboxItem ? handlePrev : undefined,
+  });
 
   // Get the resolved source URL for an item (images and local videos only)
   const getItemSrc = (item: GalleryItem): string => {
@@ -365,6 +374,7 @@ export function Portfolio() {
         <div
           className="fixed inset-0 z-50 bg-background/95 backdrop-blur-lg flex items-center justify-center"
           onClick={closeLightbox}
+          {...(isMobile ? swipeHandlers : {})}
         >
           {/* Close Button */}
           <button
