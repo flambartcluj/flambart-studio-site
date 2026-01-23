@@ -13,6 +13,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
 // Media type filter options
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
 
+// Navigation direction for slide animation
+type SlideDirection = 'left' | 'right' | null;
+
 export function Portfolio() {
   const { t, language } = useLanguage();
   const { items: galleryItems, isLoading, error } = useGallery();
@@ -20,6 +23,7 @@ export function Portfolio() {
   const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
   const [mediaTypeFilter, setMediaTypeFilter] = useState<MediaTypeFilter>('all');
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
+  const [slideDirection, setSlideDirection] = useState<SlideDirection>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -147,8 +151,9 @@ export function Portfolio() {
   }, [stopAllMedia]);
 
   // Handle navigation - stop current media before switching
-  const navigateTo = useCallback((item: GalleryItem) => {
+  const navigateTo = useCallback((item: GalleryItem, direction: SlideDirection = null) => {
     stopAllMedia();
+    setSlideDirection(direction);
     setLightboxItem(item);
   }, [stopAllMedia]);
 
@@ -160,9 +165,9 @@ export function Portfolio() {
       if (e.key === 'Escape') {
         closeLightbox();
       } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        navigateTo(filteredItems[currentIndex - 1]);
+        navigateTo(filteredItems[currentIndex - 1], 'right');
       } else if (e.key === 'ArrowRight' && currentIndex < filteredItems.length - 1) {
-        navigateTo(filteredItems[currentIndex + 1]);
+        navigateTo(filteredItems[currentIndex + 1], 'left');
       }
     };
 
@@ -172,13 +177,13 @@ export function Portfolio() {
 
   const handlePrev = () => {
     if (currentIndex > 0) {
-      navigateTo(filteredItems[currentIndex - 1]);
+      navigateTo(filteredItems[currentIndex - 1], 'right');
     }
   };
 
   const handleNext = () => {
     if (currentIndex < filteredItems.length - 1) {
-      navigateTo(filteredItems[currentIndex + 1]);
+      navigateTo(filteredItems[currentIndex + 1], 'left');
     }
   };
 
@@ -413,7 +418,13 @@ export function Portfolio() {
 
           {/* Content (Image/Video/Embed) */}
           <div
-            className="w-full max-w-5xl max-h-[85vh] mx-auto px-4 sm:px-16"
+            key={lightboxItem.id}
+            className={cn(
+              "w-full max-w-5xl max-h-[85vh] mx-auto px-4 sm:px-16",
+              slideDirection === 'left' && "animate-slide-fade-left",
+              slideDirection === 'right' && "animate-slide-fade-right",
+              !slideDirection && "animate-fade-in"
+            )}
             onClick={(e) => e.stopPropagation()}
           >
             {renderLightboxContent(lightboxItem)}

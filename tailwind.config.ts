@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
+  // Lightbox swipe transition animations added below in keyframes
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
@@ -120,6 +121,15 @@ export default {
           from: { opacity: "0", filter: "blur(10px)" },
           to: { opacity: "1", filter: "blur(0)" },
         },
+        // Subtle lightbox swipe transitions
+        "slide-fade-left": {
+          from: { opacity: "0", transform: "translateX(24px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-fade-right": {
+          from: { opacity: "0", transform: "translateX(-24px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +143,9 @@ export default {
         "fade-in-right": "fade-in-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "scale-up": "scale-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "blur-in": "blur-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        // Lightbox swipe animations - subtle and fast
+        "slide-fade-left": "slide-fade-left 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "slide-fade-right": "slide-fade-right 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards",
       },
       transitionDuration: {
         "250": "250ms",
