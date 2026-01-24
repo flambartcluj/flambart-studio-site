@@ -62,19 +62,66 @@ export function Portfolio() {
     });
   }, [activeGroup, activeSubCategory, mediaTypeFilter, galleryItems]);
 
-  // Count items per subcategory for the current group
-  const subCategoryCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    
-    galleryItems.forEach((item) => {
+  // Compute counts per group and subcategory for the current media filter
+  const { groupCounts, subCategoryCounts, visibleGroups, visibleSubCategories } = useMemo(() => {
+    // First, filter items by media type
+    let filteredByMedia = galleryItems;
+    if (mediaTypeFilter === 'photos') {
+      filteredByMedia = galleryItems.filter((item) => item.type === 'image');
+    } else if (mediaTypeFilter === 'videos') {
+      filteredByMedia = galleryItems.filter((item) => item.type === 'video' || item.type === 'embed');
+    }
+
+    // Count items per group
+    const gCounts: Record<string, number> = {};
+    // Count items per subcategory within the active group
+    const sCounts: Record<string, number> = {};
+
+    filteredByMedia.forEach((item) => {
       const mapping = getItemGroupAndSubCategory(item.category, (item as any).subCategory);
-      if (mapping && mapping.groupId === activeGroup) {
-        counts[mapping.subCategoryId] = (counts[mapping.subCategoryId] || 0) + 1;
+      if (mapping) {
+        gCounts[mapping.groupId] = (gCounts[mapping.groupId] || 0) + 1;
+        if (mapping.groupId === activeGroup) {
+          sCounts[mapping.subCategoryId] = (sCounts[mapping.subCategoryId] || 0) + 1;
+        }
       }
     });
 
-    return counts;
-  }, [activeGroup, galleryItems]);
+    // Visible groups: 'all' always visible, others only if they have items
+    const vGroups = TOP_GROUPS.filter((g) => g.id === 'all' || (gCounts[g.id] || 0) > 0);
+
+    // Visible subcategories for the current group
+    const vSubCats = subCategories.filter((sc) => (sCounts[sc.id] || 0) > 0);
+
+    return {
+      groupCounts: gCounts,
+      subCategoryCounts: sCounts,
+      visibleGroups: vGroups,
+      visibleSubCategories: vSubCats,
+    };
+  }, [galleryItems, mediaTypeFilter, activeGroup, subCategories]);
+
+  // Auto-fallback: if current group becomes empty, switch to 'all'
+  useEffect(() => {
+    if (activeGroup !== 'all' && (groupCounts[activeGroup] || 0) === 0) {
+      setActiveGroup('all');
+      setActiveSubCategory(null);
+    }
+  }, [activeGroup, groupCounts]);
+
+  // Auto-fallback: if current subcategory becomes empty, switch to first available
+  useEffect(() => {
+    if (activeGroup === 'all' || !activeSubCategory) return;
+    
+    const currentCount = subCategoryCounts[activeSubCategory] || 0;
+    if (currentCount === 0 && visibleSubCategories.length > 0) {
+      setActiveSubCategory(visibleSubCategories[0].id);
+    } else if (currentCount === 0 && visibleSubCategories.length === 0) {
+      // No subcategories with items, fallback to 'all'
+      setActiveGroup('all');
+      setActiveSubCategory(null);
+    }
+  }, [activeSubCategory, activeGroup, subCategoryCounts, visibleSubCategories]);
 
   // Handle group change - auto-select first subcategory with items
   const handleGroupChange = useCallback((groupId: string) => {
@@ -311,8 +358,9 @@ export function Portfolio() {
             activeGroup={activeGroup}
             activeSubCategory={activeSubCategory}
             mediaTypeFilter={mediaTypeFilter}
-            subCategories={subCategories}
+            subCategories={visibleSubCategories}
             subCategoryCounts={subCategoryCounts}
+            visibleGroups={visibleGroups}
             onGroupChange={handleGroupChange}
             onSubCategoryChange={setActiveSubCategory}
             onMediaTypeChange={setMediaTypeFilter}
