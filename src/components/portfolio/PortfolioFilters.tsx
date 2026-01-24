@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Image, Film, LayoutGrid } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import { TOP_GROUPS, SubCategory } from '@/lib/categoryMapping';
+import { TopGroup, SubCategory } from '@/lib/categoryMapping';
 
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
 
@@ -12,6 +12,7 @@ interface PortfolioFiltersProps {
   mediaTypeFilter: MediaTypeFilter;
   subCategories: SubCategory[];
   subCategoryCounts: Record<string, number>;
+  visibleGroups: TopGroup[];
   onGroupChange: (groupId: string) => void;
   onSubCategoryChange: (subCategoryId: string) => void;
   onMediaTypeChange: (filter: MediaTypeFilter) => void;
@@ -83,6 +84,7 @@ export function PortfolioFilters({
   mediaTypeFilter,
   subCategories,
   subCategoryCounts,
+  visibleGroups,
   onGroupChange,
   onSubCategoryChange,
   onMediaTypeChange,
@@ -137,7 +139,7 @@ export function PortfolioFilters({
       <div className="flex md:hidden flex-col gap-3">
         {/* First-level category pills */}
         <ScrollablePillRow>
-          {TOP_GROUPS.map((group) => (
+          {visibleGroups.map((group) => (
             <button
               key={group.id}
               onClick={() => onGroupChange(group.id)}
@@ -191,7 +193,7 @@ export function PortfolioFilters({
         {/* Top Group Filter */}
         <div className="mb-4">
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            {TOP_GROUPS.map((group) => (
+            {visibleGroups.map((group) => (
               <button
                 key={group.id}
                 onClick={() => onGroupChange(group.id)}
