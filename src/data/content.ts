@@ -48,6 +48,34 @@ export interface ContentData {
     subtitle: { ro: string; en: string };
     cta: { ro: string; en: string };
     categories: ServiceCategory[];
+    editorial: {
+      title: { ro: string; en: string };
+      intro: { ro: string; en: string };
+      photography: {
+        title: { ro: string; en: string };
+        description: { ro: string; en: string };
+        cta: { ro: string; en: string };
+      };
+      video: {
+        title: { ro: string; en: string };
+        intro: { ro: string; en: string };
+        cinematic: {
+          title: { ro: string; en: string };
+          description: { ro: string; en: string };
+          cta: { ro: string; en: string };
+        };
+        documentary: {
+          title: { ro: string; en: string };
+          description: { ro: string; en: string };
+          cta: { ro: string; en: string };
+        };
+      };
+      combined: {
+        title: { ro: string; en: string };
+        description: { ro: string; en: string };
+        cta: { ro: string; en: string };
+      };
+    };
   };
   about: {
     title: { ro: string; en: string };
@@ -137,10 +165,10 @@ export const content: ContentData = {
     },
   },
   services: {
-    title: { ro: 'Servicii', en: 'Services' },
+    title: { ro: 'Servicii foto & video', en: 'Photo & video services' },
     subtitle: {
-      ro: 'Servicii complete de fotografie și film',
-      en: 'Complete photography and film services',
+      ro: 'Servicii foto-video pentru evenimente, portrete și business, realizate cu atenție la detalii, emoție și coerență vizuală.',
+      en: 'Photo and video services for events, portraits, and business, delivered with attention to detail, emotion, and visual consistency.',
     },
     cta: {
       ro: 'Verifică disponibilitatea',
@@ -151,20 +179,20 @@ export const content: ContentData = {
         id: 'weddings',
         title: { ro: 'Nunți', en: 'Weddings' },
         description: {
-          ro: 'Captăm esența zilei voastre speciale cu o abordare documentară și artistică.',
-          en: 'We capture the essence of your special day with a documentary and artistic approach.',
+          ro: 'Fotografie și film pentru ziua voastră specială.',
+          en: 'Photography and film for your special day.',
         },
         deliverables: {
           ro: [
             'Fotografie full-day',
             'Film cinematografic 4K',
-            'Sesiune foto pre-nuntă',
+            'Sesiune pre-nuntă',
             'Galerie online privată',
           ],
           en: [
             'Full-day photography',
             '4K cinematic film',
-            'Pre-wedding photo session',
+            'Pre-wedding session',
             'Private online gallery',
           ],
         },
@@ -173,21 +201,21 @@ export const content: ContentData = {
         id: 'baptisms',
         title: { ro: 'Botezuri', en: 'Baptisms' },
         description: {
-          ro: 'Momente sfinte, surprinse cu delicatețe și emoție autentică.',
-          en: 'Sacred moments, captured with delicacy and authentic emotion.',
+          ro: 'Momente sfinte, surprinse cu delicatețe.',
+          en: 'Sacred moments, captured with delicacy.',
         },
         deliverables: {
           ro: [
             'Fotografie de eveniment',
             'Film cinematic',
             'Galerie online',
-            'Album foto personalizat',
+            'Album personalizat',
           ],
           en: [
             'Event photography',
             'Cinematic film',
             'Online gallery',
-            'Personalized photo album',
+            'Personalized album',
           ],
         },
       },
@@ -195,12 +223,12 @@ export const content: ContentData = {
         id: 'portraits',
         title: { ro: 'Portrete', en: 'Portraits' },
         description: {
-          ro: 'Portrete care reflectă personalitatea și esența fiecărei persoane.',
-          en: 'Portraits that reflect the personality and essence of each person.',
+          ro: 'Portrete care reflectă esența ta.',
+          en: 'Portraits that reflect your essence.',
         },
         deliverables: {
           ro: [
-            'Sesiune foto în studio sau exterior',
+            'Sesiune studio sau exterior',
             'Retușuri profesionale',
             'Galerie digitală',
             'Printuri fine art',
@@ -217,14 +245,14 @@ export const content: ContentData = {
         id: 'corporate',
         title: { ro: 'Corporate & Branding', en: 'Corporate & Branding' },
         description: {
-          ro: 'Imagini profesionale pentru identitatea brandului tău.',
-          en: 'Professional imagery for your brand identity.',
+          ro: 'Imagini profesionale pentru brandul tău.',
+          en: 'Professional imagery for your brand.',
         },
         deliverables: {
           ro: [
             'Headshots profesionale',
             'Fotografie de produs',
-            'Content pentru social media',
+            'Content social media',
             'Video de prezentare',
           ],
           en: [
@@ -239,12 +267,12 @@ export const content: ContentData = {
         id: 'architecture',
         title: { ro: 'Arhitectură', en: 'Architecture' },
         description: {
-          ro: 'Fotografiem spații și structuri care inspiră, cu atenție la lumină și compoziție.',
-          en: 'We photograph spaces and structures that inspire, with attention to light and composition.',
+          ro: 'Spații și structuri, cu atenție la lumină.',
+          en: 'Spaces and structures, with attention to light.',
         },
         deliverables: {
           ro: [
-            'Fotografie de interior/exterior',
+            'Fotografie interior/exterior',
             'Imagini aeriene cu dronă',
             'Tour virtual 360°',
             'Licență comercială',
@@ -258,6 +286,55 @@ export const content: ContentData = {
         },
       },
     ],
+    editorial: {
+      title: {
+        ro: 'Serviciile noastre foto-video',
+        en: 'Our photo & video services',
+      },
+      intro: {
+        ro: 'Serviciile noastre foto-video imortalizează momentele tale speciale cu pasiune și profesionalism, transformându-le în amintiri de neuitat.',
+        en: 'Our photo and video services capture your most important moments with passion and professionalism, turning them into lasting memories.',
+      },
+      photography: {
+        title: { ro: 'Servicii Fotografie', en: 'Photography Services' },
+        description: {
+          ro: 'Fotografia surprinde momentele importante natural, cu atenție la lumină, detalii și emoțiile reale ale zilei. Documentăm pregătirile, ceremonia, momentele alături de familie sau în cuplu și atmosfera petrecerii, în funcție de pachetul ales. Imaginile sunt atent editate și livrate digital, într-o galerie online securizată, ușor de accesat și de împărtășit. Fotografia poate fi aleasă ca serviciu de sine stătător sau alături de video, pentru o amintire completă.',
+          en: 'Photography captures important moments naturally, with attention to light, details, and genuine emotions. We document the preparations, ceremony, moments with family or as a couple, and the atmosphere of the celebration, depending on the chosen package. Images are carefully edited and delivered digitally in a secure online gallery, easy to access and share. Photography can be chosen as a standalone service or together with video for a complete memory.',
+        },
+        cta: { ro: 'Vezi exemple de fotografie', en: 'View photography examples' },
+      },
+      video: {
+        title: { ro: 'Servicii Video', en: 'Video Services' },
+        intro: {
+          ro: 'Filmarea este amintirea pe care o vei revizita ani la rând, o poveste vie care prinde viață la fiecare vizionare.',
+          en: 'Video is the memory you will revisit for years, a living story that comes alive with every viewing.',
+        },
+        cinematic: {
+          title: { ro: 'Cinematic', en: 'Cinematic' },
+          description: {
+            ro: 'Poveste cu regie planificată împreună cu voi, cu impact vizual ridicat prin colorizare artistică, sunet cinematic și cadre atent compuse. Durată: 8–20 minute + teaser 1–2 minute (inclusiv format vertical, dacă se stabilește anterior). Potrivit pentru evenimente cu focus pe estetică și distribuire online.',
+            en: 'A carefully planned, story-driven film with strong visual impact through artistic color grading, cinematic sound, and composed frames. Duration: 8–20 minutes + 1–2 minute teaser (including vertical format if agreed in advance). Ideal for events focused on aesthetics and online sharing.',
+          },
+          cta: { ro: 'Vezi un exemplu cinematic', en: 'View a cinematic example' },
+        },
+        documentary: {
+          title: { ro: 'Documentar', en: 'Documentary' },
+          description: {
+            ro: 'Filmare autentică și discretă, cu intervenții minime și culori naturale, aproape de realitate. Momente spontane, surprinse exact așa cum se întâmplă. Se livrează un film complet de 45–90 minute și un clip „best moments" de 1–4 minute.',
+            en: 'Authentic, discreet filming with minimal intervention and natural colors true to reality. Spontaneous moments captured as they happen. Delivered as a full 45–90 minute film and a 1–4 minute best moments highlight.',
+          },
+          cta: { ro: 'Vezi un exemplu documentar', en: 'View a documentary example' },
+        },
+      },
+      combined: {
+        title: { ro: 'Servicii Complete Foto + Video', en: 'Complete Photo + Video Services' },
+        description: {
+          ro: 'Oferă cea mai fluidă experiență, cu o echipă dedicată care lucrează coordonat pentru o capturare coerentă și o editare unitară. Elimină complicațiile logistice și livrează amintiri consistente, cu o viziune artistică integrată.',
+          en: 'Offers the most seamless experience, with a dedicated team working in sync for cohesive capture and unified editing. Eliminates logistical complexity and delivers consistent memories with an integrated artistic vision.',
+        },
+        cta: { ro: 'Verifică disponibilitatea', en: 'Check availability' },
+      },
+    },
   },
   about: {
     title: { ro: 'Despre noi', en: 'About us' },

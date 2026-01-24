@@ -5,6 +5,7 @@ import { useScrollTo } from '@/hooks/useScrollTo';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { ServicesEditorial } from '@/components/services/ServicesEditorial';
 
 export function Services() {
   const { t, language } = useLanguage();
@@ -26,7 +27,7 @@ export function Services() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
           <p className="caption text-primary mb-4">{t(content.services.title)}</p>
-          <h2 className="heading-md font-display">{t(content.services.subtitle)}</h2>
+          <h2 className="heading-md font-display max-w-3xl mx-auto">{t(content.services.subtitle)}</h2>
           <div className="w-16 h-px bg-primary mx-auto mt-6" />
         </div>
 
@@ -76,6 +77,9 @@ export function Services() {
             </div>
           ))}
         </div>
+
+        {/* Editorial Section */}
+        <ServicesEditorial />
       </div>
     </section>
   );
