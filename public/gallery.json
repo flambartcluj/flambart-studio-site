@@ -39,6 +39,16 @@
       "aspectRatio": "landscape"
     },
     {
+      "id": "wed-05",
+      "type": "embed",
+      "provider": "other",
+      "videoId": "<iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/L7cvx?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1"></iframe>",
+      "alt": { "ro": "test 360", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
       "id": "civil-01",
       "type": "image",
       "filename": "DSC04193.jpg",
