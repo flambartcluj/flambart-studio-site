@@ -1,255 +1,3288 @@
 {
   "items": [
     {
-      "id": "wed-01",
-      "type": "image",
-      "filename": "DSC03303.jpg",
-      "alt": { "ro": "Ceremonie de nuntă", "en": "Wedding ceremony" },
-      "category": "weddings",
-      "subCategory": "wedding",
-      "aspectRatio": "landscape"
-    },
-    {
-      "id": "wed-02",
-      "type": "image",
-      "filename": "portfolio-wedding-2.jpg",
-      "alt": { "ro": "Petrecere nuntă", "en": "Wedding party" },
-      "category": "weddings",
-      "subCategory": "wedding",
-      "aspectRatio": "landscape"
-    },
-    {
-      "id": "wed-03",
-      "type": "video",
-      "filename": "timelapse2.mp4",
-      "thumbnail": "portfolio-wedding-video-thumb.jpg",
-      "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
-      "category": "weddings",
-      "subCategory": "wedding",
-      "aspectRatio": "landscape"
-    },
-    {
-      "id": "wed-04",
+      "id": "wed-embed-001",
       "type": "embed",
       "provider": "youtube",
       "videoId": "eeAXriTPutk",
-      "alt": { "ro": "Video de nuntă", "en": "Wedding video" },
+      "alt": { "ro": "Video de nuntă – weddings", "en": "Wedding video – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
       "aspectRatio": "landscape"
     },
     {
-      "id": "wed-05",
-  "type": "embed",
-  "provider": "other",
-  "embedUrl": "https://kuula.co/share/L7cvx?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1",
-  "alt": {
-    "ro": "Tur video 360° nuntă",
-    "en": "360° wedding video tour"
-  },
-  "category": "weddings",
-  "subCategory": "wedding",
-  "aspectRatio": "landscape"
+      "id": "wed-embed-002",
+      "type": "embed",
+      "provider": "other",
+      "embedUrl": "https://kuula.co/share/L7cvx?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1",
+      "alt": { "ro": "Tur video 360° nuntă – weddings", "en": "360° wedding video tour – weddings" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
     },
     {
-      "id": "civil-01",
+      "id": "wed-civil-001",
       "type": "image",
-      "filename": "DSC04193.jpg",
-      "alt": { "ro": "Ceremonie stare civilă", "en": "Civil ceremony" },
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
       "category": "weddings",
       "subCategory": "civil",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
-      "id": "save-01",
+      "id": "wed-civil-002",
       "type": "image",
-      "filename": "portfolio-wedding-3.jpg",
-      "alt": { "ro": "Ședință Save the Date", "en": "Save the Date session" },
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-003",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-004",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-005",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-006",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-007",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-008",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-009",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-010",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-011",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-012",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-013",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-014",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-015",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-016",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-017",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-018",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-019",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-020",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-021",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-022",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0022.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-023",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0023.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-024",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0024.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-025",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0025.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-026",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0026.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-027",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0027.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-028",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0028.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-029",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0029.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-030",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0030.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-031",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0031.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-032",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0032.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-033",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0033.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-034",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0034.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-035",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0035.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-036",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0036.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-037",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0037.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-038",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0038.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-039",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0039.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-040",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0040.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-041",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0041.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-042",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0042.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-043",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0043.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-044",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0044.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-045",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0045.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-046",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0046.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-047",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0047.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-048",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0048.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-049",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0049.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-050",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0050.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-051",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0051.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-052",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0052.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-053",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0053.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-054",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0054.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-055",
+      "type": "image",
+      "filename": "weddings/civil/fotograf_stare_civila_cluj_0055.jpg",
+      "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-001",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
       "category": "weddings",
       "subCategory": "save-the-date",
       "aspectRatio": "landscape"
     },
     {
-      "id": "proposal-01",
+      "id": "wed-save-the-date-002",
       "type": "image",
-      "filename": "portfolio-wedding-5.jpg",
-      "alt": { "ro": "Cerere în căsătorie", "en": "Marriage proposal" },
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
       "category": "weddings",
-      "subCategory": "proposal",
+      "subCategory": "save-the-date",
       "aspectRatio": "landscape"
     },
     {
-      "id": "trash-01",
+      "id": "wed-save-the-date-003",
       "type": "image",
-      "filename": "portfolio-wedding-1.jpg",
-      "alt": { "ro": "Ședință Trash the Dress", "en": "Trash the Dress session" },
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
       "category": "weddings",
-      "subCategory": "trash-the-dress",
+      "subCategory": "save-the-date",
       "aspectRatio": "landscape"
     },
     {
-      "id": "bap-01",
+      "id": "wed-save-the-date-004",
       "type": "image",
-      "filename": "portfolio-wedding-3.jpg",
-      "alt": { "ro": "Botez în familie", "en": "Family baptism" },
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-005",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-006",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-007",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-008",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-009",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-010",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-011",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-save-the-date-012",
+      "type": "image",
+      "filename": "weddings/save-the-date/fotograf_save_the_date_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-001",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
       "category": "baptisms",
       "subCategory": "baptism",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
-      "id": "bap-02",
-      "type": "embed",
-      "provider": "vimeo",
-      "videoId": "76979871",
-      "thumbnail": "portfolio-event-video-thumb.jpg",
-      "alt": { "ro": "Video botez", "en": "Baptism video" },
+      "id": "bap-baptism-002",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
       "category": "baptisms",
       "subCategory": "baptism",
       "aspectRatio": "landscape"
     },
     {
-      "id": "age-01",
+      "id": "bap-baptism-003",
       "type": "image",
-      "filename": "DSC03303.jpg",
-      "alt": { "ro": "Petrecere de majorat", "en": "Coming of age party" },
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-004",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-005",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-006",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-007",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-008",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-009",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-010",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-011",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-012",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-013",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-014",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-015",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-016",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-017",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-018",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-019",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-020",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-021",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-022",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0022.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-023",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0023.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-024",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0024.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-025",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0025.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-026",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0026.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-027",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0027.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-028",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0028.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-029",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0029.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-030",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0030.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-031",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0031.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-032",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0032.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-033",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0033.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-034",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0034.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-035",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0035.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-036",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0036.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-037",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0037.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-038",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0038.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-039",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0039.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-040",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0040.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-041",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0041.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-042",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0042.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-043",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0043.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-044",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0044.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-045",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0045.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-046",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0046.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-047",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0047.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-048",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0048.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-049",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0049.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-050",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0050.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-051",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0051.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-052",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0052.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-053",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0053.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-054",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0054.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-055",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0055.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-056",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0056.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-057",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0057.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-058",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0058.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-059",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0059.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-060",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0060.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-061",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0061.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-062",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0062.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-063",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0063.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-064",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0064.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-065",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0065.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-066",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0066.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-067",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0067.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-068",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0068.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-069",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0069.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-baptism-070",
+      "type": "image",
+      "filename": "baptisms/baptism/fotograf_botez_cluj_0070.jpg",
+      "alt": { "ro": "Fotografie botez – botezuri", "en": "Baptism photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "baptism",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-001",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
       "category": "baptisms",
       "subCategory": "coming-of-age",
       "aspectRatio": "landscape"
     },
     {
-      "id": "anni-01",
+      "id": "bap-coming-of-age-002",
       "type": "image",
-      "filename": "portfolio-wedding-2.jpg",
-      "alt": { "ro": "Aniversare 25 ani", "en": "25th anniversary" },
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-003",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-004",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-005",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-006",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-007",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-008",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-009",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-010",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-011",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-012",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-013",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-014",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-015",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-016",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-017",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-018",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-019",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-020",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-021",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-022",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0022.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-023",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0023.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-024",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0024.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-025",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0025.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-026",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0026.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-027",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0027.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-028",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0028.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-029",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0029.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-030",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0030.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-031",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0031.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-032",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0032.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-033",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0033.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-034",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0034.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-035",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0035.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-036",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0036.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-037",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0037.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-038",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0038.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-039",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0039.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-040",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0040.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-041",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0041.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-042",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0042.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-043",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0043.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-044",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0044.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-045",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0045.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-coming-of-age-046",
+      "type": "image",
+      "filename": "baptisms/coming-of-age/fotograf_majorat_cluj_0046.jpg",
+      "alt": { "ro": "Fotografie majorat – botezuri", "en": "Coming of age photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-001",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
       "category": "baptisms",
       "subCategory": "anniversary",
       "aspectRatio": "landscape"
     },
     {
-      "id": "port-01",
+      "id": "bap-anniversary-002",
       "type": "image",
-      "filename": "portfolio-wedding-5.jpg",
-      "alt": { "ro": "Portret profesional", "en": "Professional portrait" },
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-003",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-004",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-005",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-006",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-007",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-008",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-009",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-010",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-011",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-012",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "bap-anniversary-013",
+      "type": "image",
+      "filename": "baptisms/anniversary/fotograf_aniversare_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie aniversare – botezuri", "en": "Anniversary photography – baptisms" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-portrait-001",
+      "type": "image",
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
       "category": "portraits",
       "subCategory": "portrait",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
-      "id": "couple-01",
+      "id": "por-portrait-002",
       "type": "image",
-      "filename": "DSC04193.jpg",
-      "alt": { "ro": "Ședință cuplu", "en": "Couple session" },
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-portrait-003",
+      "type": "image",
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-portrait-004",
+      "type": "image",
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-portrait-005",
+      "type": "image",
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-portrait-006",
+      "type": "image",
+      "filename": "portraits/portrait/fotograf_portret_fineart_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie portret – portrete", "en": "Portrait photography – portraits" },
+      "category": "portraits",
+      "subCategory": "portrait",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-couple-001",
+      "type": "image",
+      "filename": "portraits/couple/fotograf_cuplu_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie cuplu – portrete", "en": "Couple photography – portraits" },
       "category": "portraits",
       "subCategory": "couple",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
-      "id": "fam-01",
+      "id": "por-couple-002",
       "type": "image",
-      "filename": "portfolio-wedding-1.jpg",
-      "alt": { "ro": "Portret de familie", "en": "Family portrait" },
+      "filename": "portraits/couple/fotograf_cuplu_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie cuplu – portrete", "en": "Couple photography – portraits" },
+      "category": "portraits",
+      "subCategory": "couple",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-couple-003",
+      "type": "image",
+      "filename": "portraits/couple/fotograf_cuplu_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie cuplu – portrete", "en": "Couple photography – portraits" },
+      "category": "portraits",
+      "subCategory": "couple",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-couple-004",
+      "type": "image",
+      "filename": "portraits/couple/fotograf_cuplu_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie cuplu – portrete", "en": "Couple photography – portraits" },
+      "category": "portraits",
+      "subCategory": "couple",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-001",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
       "category": "portraits",
       "subCategory": "family",
       "aspectRatio": "landscape"
     },
     {
-      "id": "baby-01",
+      "id": "por-family-002",
       "type": "image",
-      "filename": "portfolio-wedding-3.jpg",
-      "alt": { "ro": "Ședință foto bebeluș", "en": "Baby photo session" },
+      "filename": "portraits/family/fotograf_familie_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
       "category": "portraits",
-      "subCategory": "baby",
-      "aspectRatio": "square"
+      "subCategory": "family",
+      "aspectRatio": "landscape"
     },
     {
-      "id": "themed-01",
+      "id": "por-family-003",
       "type": "image",
-      "filename": "DSC03303.jpg",
-      "alt": { "ro": "Ședință tematică", "en": "Themed session" },
+      "filename": "portraits/family/fotograf_familie_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-004",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-005",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-006",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-007",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-008",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-009",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-family-010",
+      "type": "image",
+      "filename": "portraits/family/fotograf_familie_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie familie – portrete", "en": "Family photography – portraits" },
+      "category": "portraits",
+      "subCategory": "family",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-001",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-002",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-003",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-004",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-005",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-006",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-007",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-008",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-009",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-010",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-011",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-012",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-013",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-baby-014",
+      "type": "image",
+      "filename": "portraits/baby/fotograf_baby_bebelusi_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie baby – portrete", "en": "Baby photography – portraits" },
+      "category": "portraits",
+      "subCategory": "baby",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-001",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
       "category": "portraits",
       "subCategory": "themed-sessions",
       "aspectRatio": "landscape"
     },
     {
-      "id": "corp-port-01",
+      "id": "por-themed-sessions-002",
       "type": "image",
-      "filename": "portfolio-wedding-2.jpg",
-      "alt": { "ro": "Portrete echipă", "en": "Team portraits" },
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-003",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-004",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-005",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-006",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-007",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-008",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-009",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-010",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-011",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-012",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-013",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-014",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-015",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-016",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-017",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-018",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-019",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-020",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "por-themed-sessions-021",
+      "type": "image",
+      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie ședințe tematice – portrete", "en": "Themed sessions photography – portraits" },
+      "category": "portraits",
+      "subCategory": "themed-sessions",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-001",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
       "category": "corporate",
       "subCategory": "portraits-teams",
       "aspectRatio": "landscape"
     },
     {
-      "id": "brand-01",
+      "id": "cor-portraits-teams-002",
       "type": "image",
-      "filename": "DSC04193.jpg",
-      "alt": { "ro": "Branding vizual", "en": "Visual branding" },
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
       "category": "corporate",
-      "subCategory": "business-branding",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "corp-event-01",
-      "type": "embed",
-      "provider": "youtube",
-      "videoId": "jNQXAC9IVRw",
-      "alt": { "ro": "Eveniment corporate", "en": "Corporate event" },
-      "category": "corporate",
-      "subCategory": "corporate-events",
+      "subCategory": "portraits-teams",
       "aspectRatio": "landscape"
     },
     {
-      "id": "real-01",
+      "id": "cor-portraits-teams-003",
       "type": "image",
-      "filename": "portfolio-wedding-5.jpg",
-      "alt": { "ro": "Fotografie imobiliară", "en": "Real estate photography" },
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-004",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-005",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-006",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-007",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-008",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-009",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-010",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-011",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-012",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-013",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-014",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-015",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-016",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-017",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-018",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-019",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-020",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-021",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-022",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0022.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-023",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0023.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-024",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0024.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-025",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0025.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-026",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0026.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-027",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0027.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-portraits-teams-028",
+      "type": "image",
+      "filename": "corporate/portraits-teams/fotograf_portret_business_grup_cluj_0028.jpg",
+      "alt": { "ro": "Fotografie portrete echipe – corporate", "en": "Portraits teams photography – corporate" },
+      "category": "corporate",
+      "subCategory": "portraits-teams",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-001",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-002",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-003",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-004",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-005",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-006",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-007",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-008",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-009",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-010",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-011",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-012",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-013",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-014",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-015",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-016",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-017",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-018",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-019",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-020",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0020.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-021",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0021.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-022",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0022.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-023",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0023.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-024",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0024.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-025",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0025.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-026",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0026.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-027",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0027.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-028",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0028.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-029",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0029.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-030",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0030.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-031",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0031.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-032",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0032.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-033",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0033.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-034",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0034.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-035",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0035.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-036",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0036.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-037",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0037.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-038",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0038.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-039",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0039.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-040",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0040.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-041",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0041.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-042",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0042.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-043",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0043.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-044",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0044.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "cor-business-branding-045",
+      "type": "image",
+      "filename": "corporate/business-branding/fotograf_business_branding_cluj_0045.jpg",
+      "alt": { "ro": "Fotografie business branding – corporate", "en": "Business branding photography – corporate" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-001",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
       "category": "architecture",
       "subCategory": "real-estate",
       "aspectRatio": "landscape"
     },
     {
-      "id": "arch-01",
+      "id": "arc-real-estate-002",
       "type": "image",
-      "filename": "DSC03303.jpg",
-      "alt": { "ro": "Fotografie arhitecturală", "en": "Architectural photography" },
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
       "category": "architecture",
-      "subCategory": "architectural",
+      "subCategory": "real-estate",
       "aspectRatio": "landscape"
     },
     {
-      "id": "arch-02",
+      "id": "arc-real-estate-003",
       "type": "image",
-      "filename": "portfolio-wedding-1.jpg",
-      "alt": { "ro": "Detalii arhitecturale", "en": "Architectural details" },
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
       "category": "architecture",
-      "subCategory": "architectural",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "tour-01",
-      "type": "embed",
-      "provider": "youtube",
-      "videoId": "2m6gKALVbLY",
-      "alt": { "ro": "Tur virtual 360", "en": "360 virtual tour" },
-      "category": "architecture",
-      "subCategory": "virtual-tours",
+      "subCategory": "real-estate",
       "aspectRatio": "landscape"
     },
     {
-      "id": "aerial-01",
+      "id": "arc-real-estate-004",
       "type": "image",
-      "filename": "portfolio-wedding-2.jpg",
-      "alt": { "ro": "Fotografie aeriană", "en": "Aerial photography" },
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-005",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-006",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-007",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-008",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-009",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-010",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-011",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-012",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-013",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-014",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-015",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-016",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-017",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-real-estate-018",
+      "type": "image",
+      "filename": "architecture/real-estate/fotograf_imobiliar_casa_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie imobiliar – arhitectură", "en": "Real estate photography – architecture" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-001",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
       "category": "architecture",
       "subCategory": "aerial",
       "aspectRatio": "landscape"
     },
     {
-      "id": "aerial-02",
-      "type": "video",
-      "filename": "timelapse2.mp4",
-      "thumbnail": "portfolio-wedding-video-thumb.jpg",
-      "alt": { "ro": "Video aerian dronă", "en": "Aerial drone video" },
+      "id": "arc-aerial-002",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-003",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0001.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-004",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0002.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-005",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0003.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-006",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0004.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-007",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0005.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-008",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0006.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-009",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0007.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-010",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0008.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-011",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0009.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-012",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0010.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-013",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0011.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-014",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0012.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-015",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0013.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-016",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0014.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-017",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0015.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-018",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0016.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-019",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0017.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-020",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0018.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
+      "category": "architecture",
+      "subCategory": "aerial",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-aerial-021",
+      "type": "image",
+      "filename": "architecture/aerial/fotograf_aerian_drona_imobiliar_cluj_0019.jpg",
+      "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
       "category": "architecture",
       "subCategory": "aerial",
       "aspectRatio": "landscape"
