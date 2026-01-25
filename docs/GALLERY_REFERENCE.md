@@ -27,6 +27,50 @@ Media assets (images, videos) should be placed in:
 public/gallery-assets/
 ```
 
+### Recommended Folder Structure
+
+Organize assets into category/subcategory folders for easier management:
+
+```
+public/gallery-assets/
+  weddings/
+    wedding/
+    civil/
+    save-the-date/
+    proposal/
+    trash-the-dress/
+  baptisms/
+    baptism/
+    coming-of-age/
+    anniversary/
+  portraits/
+    portrait/
+    couple/
+    family/
+    baby/
+    themed-sessions/
+  corporate/
+    portraits-teams/
+    business-branding/
+    corporate-events/
+  architecture/
+    real-estate/
+    architectural/
+    virtual-tours/
+    aerial/
+```
+
+### Path Formats
+
+Both formats are supported (you can migrate gradually):
+
+| Format | `filename` Example | Resolves To |
+|--------|-------------------|-------------|
+| **Flat (legacy)** | `photo.jpg` | `/gallery-assets/photo.jpg` |
+| **Organized** | `weddings/wedding/photo.jpg` | `/gallery-assets/weddings/wedding/photo.jpg` |
+
+**Path formula:** `{category}/{subCategory}/{filename}`
+
 ---
 
 ## Top-Level Categories & Subcategories
@@ -123,12 +167,12 @@ Every item in `gallery.json` must follow this structure:
 ## Item Types
 
 ### 1. Image
-Local image file from `gallery-assets/`:
+Local image file from `gallery-assets/` (using organized folder structure):
 ```json
 {
   "id": "wed-01",
   "type": "image",
-  "filename": "DSC03303.jpg",
+  "filename": "weddings/wedding/DSC03303.jpg",
   "alt": { "ro": "Ceremonie de nuntă", "en": "Wedding ceremony" },
   "category": "weddings",
   "subCategory": "wedding",
@@ -137,13 +181,13 @@ Local image file from `gallery-assets/`:
 ```
 
 ### 2. Video (Local)
-Local video file with optional thumbnail:
+Local video file with thumbnail (using organized folder structure):
 ```json
 {
   "id": "wed-03",
   "type": "video",
-  "filename": "timelapse2.mp4",
-  "thumbnail": "portfolio-wedding-video-thumb.jpg",
+  "filename": "weddings/wedding/timelapse.mp4",
+  "thumbnail": "weddings/wedding/timelapse-thumb.jpg",
   "alt": { "ro": "Film de nuntă", "en": "Wedding film" },
   "category": "weddings",
   "subCategory": "wedding",
@@ -192,14 +236,14 @@ Vimeo video by ID:
 
 ### Adding a New Wedding Photo
 
-1. Upload image to `public/gallery-assets/my-wedding-photo.jpg`
+1. Upload image to `public/gallery-assets/weddings/wedding/my-wedding-photo.jpg`
 2. Add entry to `public/gallery.json`:
 
 ```json
 {
   "id": "wed-new-01",
   "type": "image",
-  "filename": "my-wedding-photo.jpg",
+  "filename": "weddings/wedding/my-wedding-photo.jpg",
   "alt": { "ro": "Fotografie de nuntă nouă", "en": "New wedding photo" },
   "category": "weddings",
   "subCategory": "wedding",
@@ -224,16 +268,16 @@ Vimeo video by ID:
 
 ### Adding an Aerial Drone Video
 
-1. Upload video to `public/gallery-assets/drone-flight.mp4`
-2. Upload thumbnail to `public/gallery-assets/drone-thumb.jpg`
+1. Upload video to `public/gallery-assets/architecture/aerial/drone-flight.mp4`
+2. Upload thumbnail to `public/gallery-assets/architecture/aerial/drone-thumb.jpg`
 3. Add entry:
 
 ```json
 {
   "id": "aerial-vid-01",
   "type": "video",
-  "filename": "drone-flight.mp4",
-  "thumbnail": "drone-thumb.jpg",
+  "filename": "architecture/aerial/drone-flight.mp4",
+  "thumbnail": "architecture/aerial/drone-thumb.jpg",
   "alt": { "ro": "Filmare cu drona", "en": "Drone footage" },
   "category": "architecture",
   "subCategory": "aerial",
