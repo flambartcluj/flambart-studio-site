@@ -393,13 +393,13 @@ export const content: ContentData = {
       ro: 'Timp de răspuns: 24–48h',
       en: 'Response time: 24–48h',
     },
-    email: 'hello@flambart.studio',
-    phone: '+40 700 000 000',
+    email: 'flambartcluj@gmail.com',
+    phone: '+40 774 902 262',
     whatsapp: {
-      number: '+40700000000',
+      number: '+40774902262',
       message: {
-        ro: 'Bună! Aș dori să aflu mai multe despre serviciile Flambart.',
-        en: 'Hello! I would like to learn more about Flambart services.',
+        ro: 'Bună! Am văzut portofoliul Flambart și aș dori mai multe detalii.',
+        en: 'Hi! I saw the Flambart portfolio and would like more details.',
       },
     },
   },
