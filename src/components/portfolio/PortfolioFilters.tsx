@@ -14,7 +14,7 @@ interface PortfolioFiltersProps {
   subCategoryCounts: Record<string, number>;
   visibleGroups: TopGroup[];
   onGroupChange: (groupId: string) => void;
-  onSubCategoryChange: (subCategoryId: string) => void;
+  onSubCategoryChange: (subCategoryId: string | null) => void;
   onMediaTypeChange: (filter: MediaTypeFilter) => void;
 }
 
@@ -160,10 +160,10 @@ export function PortfolioFilters({
           <ScrollablePillRow>
             {/* "All" option for subcategories */}
             <button
-              onClick={() => onSubCategoryChange('all')}
+              onClick={() => onSubCategoryChange(null)}
               className={cn(
                 'flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
-                activeSubCategory === null || activeSubCategory === 'all'
+                activeSubCategory === null
                   ? 'bg-primary text-primary-foreground border-primary'
                   : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
               )}
@@ -229,10 +229,10 @@ export function PortfolioFilters({
               <div className="flex gap-2 overflow-x-auto pb-2 px-4 max-w-full scrollbar-hide">
                 {/* "All" option for subcategories */}
                 <button
-                  onClick={() => onSubCategoryChange('all')}
+                  onClick={() => onSubCategoryChange(null)}
                   className={cn(
                     'px-3 md:px-4 py-1.5 md:py-2 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
-                    activeSubCategory === null || activeSubCategory === 'all'
+                    activeSubCategory === null
                       ? 'bg-primary text-primary-foreground border-primary'
                       : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
                   )}
