@@ -53,8 +53,8 @@ export function Portfolio() {
       // Check if item belongs to the active group
       if (mapping.groupId !== activeGroup) return false;
 
-      // If a subcategory is selected, filter by it
-      if (activeSubCategory) {
+      // If a subcategory is selected (and it's not 'all'), filter by it
+      if (activeSubCategory && activeSubCategory !== 'all') {
         return mapping.subCategoryId === activeSubCategory;
       }
 
