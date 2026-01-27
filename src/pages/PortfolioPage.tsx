@@ -1,25 +1,26 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
-import { FeaturedPortfolio } from '@/components/FeaturedPortfolio';
-import { Services } from '@/components/Services';
-import { About } from '@/components/About';
-import { Contact } from '@/components/Contact';
+import { Portfolio } from '@/components/Portfolio';
 import { Footer } from '@/components/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { BackToTop } from '@/components/BackToTop';
 
-const Index = () => {
+const PortfolioPage = () => {
+  const location = useLocation();
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <LanguageProvider defaultLanguage="ro">
       <div className="min-h-screen bg-background text-foreground">
         <Header />
-        <main>
-          <Hero />
-          <FeaturedPortfolio />
-          <Services />
-          <About />
-          <Contact />
+        <main className="pt-20">
+          <Portfolio />
         </main>
         <Footer />
         <WhatsAppButton />
@@ -29,4 +30,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default PortfolioPage;
