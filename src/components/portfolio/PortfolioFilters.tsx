@@ -158,6 +158,18 @@ export function PortfolioFilters({
         {/* Second-level subcategory pills */}
         {activeGroup !== 'all' && subCategories.length > 0 && (
           <ScrollablePillRow>
+            {/* "All" option for subcategories */}
+            <button
+              onClick={() => onSubCategoryChange('all')}
+              className={cn(
+                'flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
+                activeSubCategory === null || activeSubCategory === 'all'
+                  ? 'bg-primary text-primary-foreground border-primary'
+                  : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
+              )}
+            >
+              {language === 'ro' ? 'Toate' : 'All'}
+            </button>
             {subCategories.map((subCat) => {
               const count = subCategoryCounts[subCat.id] || 0;
               const isActive = activeSubCategory === subCat.id;
@@ -215,6 +227,18 @@ export function PortfolioFilters({
           <div className="mb-10">
             <div className="flex justify-center">
               <div className="flex gap-2 overflow-x-auto pb-2 px-4 max-w-full scrollbar-hide">
+                {/* "All" option for subcategories */}
+                <button
+                  onClick={() => onSubCategoryChange('all')}
+                  className={cn(
+                    'px-3 md:px-4 py-1.5 md:py-2 text-xs font-medium rounded-full border whitespace-nowrap transition-all duration-200',
+                    activeSubCategory === null || activeSubCategory === 'all'
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'bg-background text-muted-foreground border-border/50 hover:border-primary/50 hover:text-foreground'
+                  )}
+                >
+                  {language === 'ro' ? 'Toate' : 'All'}
+                </button>
                 {subCategories.map((subCat) => {
                   const count = subCategoryCounts[subCat.id] || 0;
                   return (
