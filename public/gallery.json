@@ -8,7 +8,8 @@
       "alt": { "ro": "Video de nuntă – weddings", "en": "Wedding video – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "landscape"
+      "aspectRatio": "landscape",
+      "featured": true
     },
     {
       "id": "wed-embed-002",
@@ -27,7 +28,8 @@
       "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
       "category": "weddings",
       "subCategory": "civil",
-      "aspectRatio": "landscape"
+      "aspectRatio": "landscape",
+      "featured": true
     },
     {
       "id": "wed-civil-002",

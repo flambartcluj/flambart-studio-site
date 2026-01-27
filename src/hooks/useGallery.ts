@@ -15,6 +15,7 @@ interface GalleryItemBase {
   category: GalleryCategory;
   aspectRatio?: 'landscape' | 'portrait' | 'square';
   thumbnail?: string; // Optional poster/thumbnail for videos and embeds
+  featured?: boolean; // Optional flag for featured items on homepage
 }
 
 // Image item
@@ -144,5 +145,8 @@ export function useGallery() {
     loadGallery();
   }, []);
 
-  return { items, isLoading, error };
+  // Get featured items (max 18)
+  const featuredItems = items.filter(item => item.featured === true).slice(0, 18);
+
+  return { items, featuredItems, isLoading, error };
 }
