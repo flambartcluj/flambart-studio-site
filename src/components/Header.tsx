@@ -1,5 +1,6 @@
 import { useState, useEffect, type MouseEvent } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollTo } from '@/hooks/useScrollTo';
@@ -11,8 +12,15 @@ import logoWhite from '@/assets/logo-white.png';
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const scrollTo = useScrollTo();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Determine if we're on a page that needs solid header by default (non-homepage)
+  const isNonHomePage = location.pathname !== '/';
+  
+  // Use solid header styling if scrolled OR if on a non-homepage route
+  const useSolidHeader = isScrolled || isNonHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +52,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-350',
-        isScrolled
+        useSolidHeader
           ? 'bg-background/95 backdrop-blur-md border-b border-border'
           : 'bg-transparent'
       )}
@@ -52,20 +60,16 @@ export function Header() {
       <div className="container-wide">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+          <Link
+            to="/"
             className="hover:opacity-80 transition-opacity duration-250"
           >
             <img 
-              src={isScrolled ? logoBlack : logoWhite} 
+              src={useSolidHeader ? logoBlack : logoWhite} 
               alt="Flambart" 
               className="h-10 md:h-12 w-auto transition-opacity duration-300"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -75,7 +79,7 @@ export function Header() {
                 onClick={() => handleNavClick(item.target)}
                 className={cn(
                   'text-sm tracking-wide transition-colors duration-250 gold-underline',
-                  isScrolled 
+                  useSolidHeader 
                     ? 'text-muted-foreground hover:text-foreground' 
                     : 'text-white/70 hover:text-white'
                 )}
@@ -87,7 +91,7 @@ export function Header() {
             {/* Language Switcher */}
             <div className={cn(
               'flex items-center gap-1 ml-4 border-l pl-4',
-              isScrolled ? 'border-border' : 'border-white/30'
+              useSolidHeader ? 'border-border' : 'border-white/30'
             )}>
               <button
                 onClick={() => setLanguage('ro')}
@@ -95,21 +99,21 @@ export function Header() {
                   'px-2 py-1 text-xs tracking-wider uppercase transition-colors duration-250',
                   language === 'ro'
                     ? 'text-primary font-medium'
-                    : isScrolled 
+                    : useSolidHeader 
                       ? 'text-muted-foreground hover:text-foreground'
                       : 'text-white/60 hover:text-white'
                 )}
               >
                 RO
               </button>
-              <span className={isScrolled ? 'text-border' : 'text-white/30'}>/</span>
+              <span className={useSolidHeader ? 'text-border' : 'text-white/30'}>/</span>
               <button
                 onClick={() => setLanguage('en')}
                 className={cn(
                   'px-2 py-1 text-xs tracking-wider uppercase transition-colors duration-250',
                   language === 'en'
                     ? 'text-primary font-medium'
-                    : isScrolled 
+                    : useSolidHeader 
                       ? 'text-muted-foreground hover:text-foreground'
                       : 'text-white/60 hover:text-white'
                 )}
@@ -125,7 +129,7 @@ export function Header() {
               <button
                 className={cn(
                   'md:hidden p-2',
-                  isScrolled ? 'text-foreground' : 'text-white'
+                  useSolidHeader ? 'text-foreground' : 'text-white'
                 )}
                 aria-label="Toggle menu"
                 data-testid="mobile-menu-trigger"
