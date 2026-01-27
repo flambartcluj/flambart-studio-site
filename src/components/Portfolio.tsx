@@ -10,6 +10,40 @@ import { PortfolioFilters } from '@/components/portfolio/PortfolioFilters';
 import { useTouchSwipe } from '@/hooks/useTouchSwipe';
 import { useIsMobile } from '@/hooks/use-mobile';
 
+// DEV: Dimension scanner - runs once to detect portrait images
+const scanGalleryDimensions = async (items: GalleryItem[]) => {
+  const imageItems = items.filter((item): item is GalleryItem & { type: 'image'; filename: string } => 
+    item.type === 'image'
+  );
+  
+  const portraitIds: string[] = [];
+  
+  for (const item of imageItems) {
+    const url = resolveGalleryUrl(item.filename);
+    try {
+      const dimensions = await new Promise<{ width: number; height: number }>((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+        img.onerror = () => reject(new Error(`Failed: ${url}`));
+        img.src = url;
+      });
+      
+      if (dimensions.height > dimensions.width) {
+        portraitIds.push(item.id);
+      }
+    } catch (e) {
+      console.error(`Error loading ${item.filename}`);
+    }
+  }
+  
+  console.log('=== PORTRAIT_IDS_START ===');
+  console.log(JSON.stringify(portraitIds));
+  console.log('=== PORTRAIT_IDS_END ===');
+  console.log(`Total portrait images: ${portraitIds.length}`);
+  
+  return portraitIds;
+};
+
 // Media type filter options
 type MediaTypeFilter = 'all' | 'photos' | 'videos';
 
@@ -27,6 +61,15 @@ export function Portfolio() {
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  
+  // DEV: Run dimension scanner once when gallery loads
+  const [scanComplete, setScanComplete] = useState(false);
+  useEffect(() => {
+    if (!isLoading && galleryItems.length > 0 && !scanComplete) {
+      setScanComplete(true);
+      scanGalleryDimensions(galleryItems);
+    }
+  }, [isLoading, galleryItems, scanComplete]);
 
   // Get the current group's subcategories
   const currentGroup = TOP_GROUPS.find((g) => g.id === activeGroup);
