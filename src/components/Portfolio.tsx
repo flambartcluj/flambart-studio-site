@@ -53,8 +53,8 @@ export function Portfolio() {
       // Check if item belongs to the active group
       if (mapping.groupId !== activeGroup) return false;
 
-      // If a subcategory is selected (and it's not 'all'), filter by it
-      if (activeSubCategory && activeSubCategory !== 'all') {
+      // If a subcategory is selected, filter by it
+      if (activeSubCategory) {
         return mapping.subCategoryId === activeSubCategory;
       }
 
@@ -123,48 +123,11 @@ export function Portfolio() {
     }
   }, [activeSubCategory, activeGroup, subCategoryCounts, visibleSubCategories]);
 
-  // Handle group change - auto-select first subcategory with items
+  // Handle group change - default to null (show all subcategories)
   const handleGroupChange = useCallback((groupId: string) => {
     setActiveGroup(groupId);
-    
-    if (groupId === 'all') {
-      setActiveSubCategory(null);
-      return;
-    }
-
-    const group = TOP_GROUPS.find((g) => g.id === groupId);
-    if (!group || group.subCategories.length === 0) {
-      setActiveSubCategory(null);
-      return;
-    }
-
-    // Find first subcategory with items
-    const itemsInGroup = galleryItems.filter((item) => {
-      const mapping = getItemGroupAndSubCategory(item.category, (item as any).subCategory);
-      return mapping?.groupId === groupId;
-    });
-
-    if (itemsInGroup.length === 0) {
-      // No items in this group, select first subcategory to show empty state
-      setActiveSubCategory(group.subCategories[0].id);
-      return;
-    }
-
-    // Find first subcategory that has items
-    for (const subCat of group.subCategories) {
-      const hasItems = itemsInGroup.some((item) => {
-        const mapping = getItemGroupAndSubCategory(item.category, (item as any).subCategory);
-        return mapping?.subCategoryId === subCat.id;
-      });
-      if (hasItems) {
-        setActiveSubCategory(subCat.id);
-        return;
-      }
-    }
-
-    // Fallback to first subcategory
-    setActiveSubCategory(group.subCategories[0].id);
-  }, [galleryItems]);
+    setActiveSubCategory(null);
+  }, []);
 
   const currentIndex = lightboxItem
     ? filteredItems.findIndex((item) => item.id === lightboxItem.id)
