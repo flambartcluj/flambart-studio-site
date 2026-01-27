@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PortfolioPage from "./pages/PortfolioPage";
 import NotFound from "./pages/NotFound";
-import DevScanGallery from "./pages/DevScanGallery";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +18,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/portofoliu" element={<PortfolioPage />} />
-          <Route path="/dev/scan-gallery" element={<DevScanGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
