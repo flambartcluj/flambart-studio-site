@@ -193,10 +193,10 @@ const pageContent = {
     },
   },
   photographyInfo: {
-    title: { ro: 'Servicii Fotografie', en: 'Photography Services' },
+    title: { ro: 'Servicii Integrate Foto + Video', en: 'Integrated Photo + Video Services' },
     body: {
-      ro: 'Fotografia surprinde momentele importante natural, cu atenție la lumină, detalii și emoțiile reale ale zilei. Documentăm pregătirile, ceremonia, momentele alături de familie sau în cuplu și atmosfera petrecerii, în funcție de pachetul ales.\n\nImaginile sunt atent editate și livrate digital, într-o galerie online securizată, ușor de accesat și de împărtășit. Fotografia poate fi aleasă ca serviciu de sine stătător sau alături de video, pentru o amintire completă.',
-      en: 'Photography captures important moments naturally, with attention to light, details, and the real emotions of the day. We document preparations, the ceremony, moments with family or as a couple, and the party atmosphere, depending on the chosen package.\n\nImages are carefully edited and delivered digitally in a secure online gallery, easy to access and share. Photography can be chosen as a standalone service or alongside video for a complete memory.',
+      ro: 'Echipă dedicată, stil unitar (cinematic sau documentar), flux de lucru optim, cadre aeriene incluse și flexibilitate totală în alegerea stilului. Ideal pentru evenimente și proiecte unde coerența vizuală este esențială.',
+      en: 'Dedicated team, unified style (cinematic or documentary), optimized workflow, aerial footage included, and full flexibility in choosing the visual approach. Ideal for projects where visual coherence is essential.',
     },
   },
   cta: {
