@@ -4019,6 +4019,216 @@
       "category": "architecture",
       "subCategory": "aerial",
       "aspectRatio": "landscape"
+    },
+    {
+      "id": "corp-branding-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "_5uOybWscnE",
+      "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-std-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "jDIK4AIYAEg",
+      "alt": { "ro": "Video Save the date", "en": "Save the date video" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-civil-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "EXK80doOHqw",
+      "alt": { "ro": "Video Stare civilă", "en": "Civil ceremony video" },
+      "category": "weddings",
+      "subCategory": "civil",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-003",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "2rMCEPT6Xlc",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-004",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "qXwnzNo0TNA",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-005",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "blZmwb1Z68w",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-006",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "xdXjWut4REI",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "event-anniv-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "e_PfFG-OYp4",
+      "alt": { "ro": "Video Aniversare", "en": "Anniversary video" },
+      "category": "baptisms",
+      "subCategory": "anniversary",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-std-vid-002",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "VFxfwv1aWVM",
+      "alt": { "ro": "Video Save the date", "en": "Save the date video" },
+      "category": "weddings",
+      "subCategory": "save-the-date",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-007",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "qlN5W4ZW4xA",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "event-majorat-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "YyKT1jeJiiQ",
+      "alt": { "ro": "Video Majorat", "en": "Coming of age video" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-proposal-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "TcioYpkl6y8",
+      "alt": { "ro": "Video Proposal / Logodnă", "en": "Proposal / Engagement video" },
+      "category": "weddings",
+      "subCategory": "proposal",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-008",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "FmnZRgKcxuY",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "corp-branding-vid-002",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "MB2-c09HHGk",
+      "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "event-majorat-vid-002",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "5EGyQOUTN4A",
+      "alt": { "ro": "Video Majorat", "en": "Coming of age video" },
+      "category": "baptisms",
+      "subCategory": "coming-of-age",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "corp-branding-vid-003",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "Py4jHyBnpzw",
+      "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "corp-branding-vid-004",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "FUa_F_4Dj7Q",
+      "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-009",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "43S54Yt5HBo",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "corp-branding-vid-005",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "OKWqVIIcA4Y",
+      "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
+      "category": "corporate",
+      "subCategory": "business-branding",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-realestate-vid-001",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "dDWpF1Hmpgc",
+      "alt": { "ro": "Video Imobiliar", "en": "Real estate video" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "wed-embed-010",
+      "type": "embed",
+      "provider": "youtube",
+      "videoId": "2BkI-WZtnKE",
+      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
+      "category": "weddings",
+      "subCategory": "wedding",
+      "aspectRatio": "landscape"
     }
   ]
 }
