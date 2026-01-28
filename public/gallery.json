@@ -4229,6 +4229,39 @@
       "category": "weddings",
       "subCategory": "wedding",
       "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-realestate-360-001",
+      "type": "embed",
+      "provider": "other",
+      "embedUrl": "https://kuula.co/share/L7c9k?logo=1&info=1&fs=1&vr=0&zoom=1&thumbs=1",
+      "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
+      "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-realestate-360-002",
+      "type": "embed",
+      "provider": "other",
+      "embedUrl": "https://kuula.co/share/L7cvx?logo=1&info=1&fs=1&vr=0&zoom=1&thumbs=1",
+      "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
+      "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
+    },
+    {
+      "id": "arc-realestate-360-003",
+      "type": "embed",
+      "provider": "other",
+      "embedUrl": "https://kuula.co/share/hNvZh?logo=1&info=1&fs=1&vr=0&zoom=1&thumbs=1",
+      "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
+      "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
+      "category": "architecture",
+      "subCategory": "real-estate",
+      "aspectRatio": "landscape"
     }
   ]
 }
