@@ -3,7 +3,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ServicesEditorial } from '@/components/services/ServicesEditorial';
 import { Link } from 'react-router-dom';
 
 export function Services() {
@@ -67,9 +66,6 @@ export function Services() {
             </Link>
           </Button>
         </div>
-
-        {/* Editorial Section */}
-        <ServicesEditorial />
       </div>
     </section>
   );
