@@ -192,6 +192,13 @@ const pageContent = {
       en: 'Proven experience · Coordinated team · Premium delivery',
     },
   },
+  photographyInfo: {
+    title: { ro: 'Servicii Fotografie', en: 'Photography Services' },
+    body: {
+      ro: 'Fotografia surprinde momentele importante natural, cu atenție la lumină, detalii și emoțiile reale ale zilei. Documentăm pregătirile, ceremonia, momentele alături de familie sau în cuplu și atmosfera petrecerii, în funcție de pachetul ales.\n\nImaginile sunt atent editate și livrate digital, într-o galerie online securizată, ușor de accesat și de împărtășit. Fotografia poate fi aleasă ca serviciu de sine stătător sau alături de video, pentru o amintire completă.',
+      en: 'Photography captures important moments naturally, with attention to light, details, and the real emotions of the day. We document preparations, the ceremony, moments with family or as a couple, and the party atmosphere, depending on the chosen package.\n\nImages are carefully edited and delivered digitally in a secure online gallery, easy to access and share. Photography can be chosen as a standalone service or alongside video for a complete memory.',
+    },
+  },
   cta: {
     label: { ro: 'Solicită ofertă personalizată', en: 'Request a custom quote' },
   },
@@ -230,6 +237,25 @@ export default function ServicesPage() {
             <p className="text-sm text-muted-foreground/70 tracking-wide">
               {t(pageContent.hero.reassurance)}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Photography Info Section */}
+      <section className="py-12 md:py-16">
+        <div className="container-wide">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-sm font-display text-foreground mb-4">
+              {t(pageContent.photographyInfo.title)}
+            </h2>
+            <div className="w-10 h-px bg-primary/50 mb-6" />
+            <div className="space-y-4">
+              {t(pageContent.photographyInfo.body).split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="body-md text-muted-foreground leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
