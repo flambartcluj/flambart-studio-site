@@ -192,13 +192,6 @@ const pageContent = {
       en: 'Proven experience · Coordinated team · Premium delivery',
     },
   },
-  {/*photographyInfo: {
-    title: { ro: 'Servicii Integrate Foto + Video', en: 'Integrated Photo + Video Services' },
-    body: {
-      ro: 'Echipă dedicată, stil unitar (cinematic sau documentar), flux de lucru optim, cadre aeriene incluse și flexibilitate totală în alegerea stilului. Ideal pentru evenimente și proiecte unde coerența vizuală este esențială.',
-      en: 'Dedicated team, unified style (cinematic or documentary), optimized workflow, aerial footage included, and full flexibility in choosing the visual approach. Ideal for projects where visual coherence is essential.',
-    },
-  },*/}
   cta: {
     label: { ro: 'Solicită ofertă personalizată', en: 'Request a custom quote' },
   },
@@ -237,25 +230,6 @@ export default function ServicesPage() {
             <p className="text-sm text-muted-foreground/70 tracking-wide">
               {t(pageContent.hero.reassurance)}
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Photography Info Section */}
-      <section className="py-12 md:py-16">
-        <div className="container-wide">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-sm font-display text-foreground mb-4">
-              {t(pageContent.photographyInfo.title)}
-            </h2>
-            <div className="w-10 h-px bg-primary/50 mb-6" />
-            <div className="space-y-4">
-              {t(pageContent.photographyInfo.body).split('\n\n').map((paragraph, idx) => (
-                <p key={idx} className="body-md text-muted-foreground leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
           </div>
         </div>
       </section>
