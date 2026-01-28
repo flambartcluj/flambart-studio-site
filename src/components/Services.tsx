@@ -1,15 +1,13 @@
-import { Check } from 'lucide-react';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useScrollTo } from '@/hooks/useScrollTo';
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ServicesEditorial } from '@/components/services/ServicesEditorial';
+import { Link } from 'react-router-dom';
 
 export function Services() {
-  const { t, language } = useLanguage();
-  const scrollTo = useScrollTo();
+  const { t } = useLanguage();
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
 
   return (
@@ -51,31 +49,23 @@ export function Services() {
               </h3>
 
               {/* Description */}
-              <p className="body-md text-muted-foreground mb-6 text-sm">
+              <p className="body-md text-muted-foreground text-sm">
                 {t(service.description)}
               </p>
-
-              {/* Deliverables */}
-              <ul className="space-y-2 mb-6">
-                {service.deliverables[language].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 group/item">
-                    <Check size={14} className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
-                    <span className="text-xs text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => scrollTo('contact')}
-                className="w-full border-border text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 text-xs"
-              >
-                {t(content.services.cta)}
-              </Button>
             </div>
           ))}
+        </div>
+
+        {/* Global CTA */}
+        <div className={cn(
+          "text-center mt-12 transition-all duration-700 delay-500",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        )}>
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Link to="/servicii">
+              {t(content.services.viewAllCta)}
+            </Link>
+          </Button>
         </div>
 
         {/* Editorial Section */}
