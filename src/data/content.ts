@@ -47,6 +47,7 @@ export interface ContentData {
     title: { ro: string; en: string };
     subtitle: { ro: string; en: string };
     cta: { ro: string; en: string };
+    viewAllCta: { ro: string; en: string };
     categories: ServiceCategory[];
     editorial: {
       title: { ro: string; en: string };
@@ -174,116 +175,55 @@ export const content: ContentData = {
       ro: 'Verifică disponibilitatea',
       en: 'Check availability',
     },
+    viewAllCta: {
+      ro: 'Vezi toate serviciile',
+      en: 'View all services',
+    },
     categories: [
       {
         id: 'weddings',
-        title: { ro: 'Nunți', en: 'Weddings' },
+        title: { ro: 'Nunți & Evenimente Speciale', en: 'Weddings & Special Events' },
         description: {
-          ro: 'Fotografie și film pentru ziua voastră specială.',
-          en: 'Photography and film for your special day.',
+          ro: 'Fotografie și videografie premium pentru evenimente, în stil cinematic sau documentar, completate de cadre aeriene spectaculoase.',
+          en: 'Premium photography and videography for events, in cinematic or documentary style, complemented by striking aerial footage.',
         },
-        deliverables: {
-          ro: [
-            'Fotografie full-day',
-            'Film cinematografic 4K',
-            'Sesiune pre-nuntă',
-            'Galerie online privată',
-          ],
-          en: [
-            'Full-day photography',
-            '4K cinematic film',
-            'Pre-wedding session',
-            'Private online gallery',
-          ],
-        },
+        deliverables: { ro: [], en: [] },
       },
       {
         id: 'baptisms',
-        title: { ro: 'Botezuri', en: 'Baptisms' },
+        title: { ro: 'Portret & Ședințe Personale', en: 'Portrait & Personal Sessions' },
         description: {
-          ro: 'Momente sfinte, surprinse cu delicatețe.',
-          en: 'Sacred moments, captured with delicacy.',
+          ro: 'Portrete fine art, cuplu, familie și ședințe tematice, realizate cu lumină controlată și cadre creative.',
+          en: 'Fine art portraits, couple, family, and themed sessions, created with controlled lighting and creative compositions.',
         },
-        deliverables: {
-          ro: [
-            'Fotografie de eveniment',
-            'Film cinematic',
-            'Galerie online',
-            'Album personalizat',
-          ],
-          en: [
-            'Event photography',
-            'Cinematic film',
-            'Online gallery',
-            'Personalized album',
-          ],
-        },
+        deliverables: { ro: [], en: [] },
       },
       {
         id: 'portraits',
-        title: { ro: 'Portrete', en: 'Portraits' },
+        title: { ro: 'Corporate & Business', en: 'Corporate & Business' },
         description: {
-          ro: 'Portrete care reflectă esența ta.',
-          en: 'Portraits that reflect your essence.',
+          ro: 'Fotografie și video profesionale pentru branduri, echipe și evenimente corporate.',
+          en: 'Professional photography and video for brands, teams, and corporate events.',
         },
-        deliverables: {
-          ro: [
-            'Sesiune studio sau exterior',
-            'Retușuri profesionale',
-            'Galerie digitală',
-            'Printuri fine art',
-          ],
-          en: [
-            'Studio or outdoor session',
-            'Professional retouching',
-            'Digital gallery',
-            'Fine art prints',
-          ],
-        },
+        deliverables: { ro: [], en: [] },
       },
       {
         id: 'corporate',
-        title: { ro: 'Corporate & Branding', en: 'Corporate & Branding' },
+        title: { ro: 'Imobiliar & Arhitectură', en: 'Real Estate & Architecture' },
         description: {
-          ro: 'Imagini profesionale pentru brandul tău.',
-          en: 'Professional imagery for your brand.',
+          ro: 'Fotografie premium, tururi virtuale 360° și imagini aeriene pentru prezentări de impact.',
+          en: 'Premium photography, 360° virtual tours, and aerial imagery for high-impact presentations.',
         },
-        deliverables: {
-          ro: [
-            'Headshots profesionale',
-            'Fotografie de produs',
-            'Content social media',
-            'Video de prezentare',
-          ],
-          en: [
-            'Professional headshots',
-            'Product photography',
-            'Social media content',
-            'Presentation video',
-          ],
-        },
+        deliverables: { ro: [], en: [] },
       },
       {
         id: 'architecture',
-        title: { ro: 'Arhitectură', en: 'Architecture' },
+        title: { ro: 'Servicii Integrate Foto + Video', en: 'Integrated Photo + Video Services' },
         description: {
-          ro: 'Spații și structuri, cu atenție la lumină.',
-          en: 'Spaces and structures, with attention to light.',
+          ro: 'Experiență completă foto + video, cu echipă coordonată, stil unitar și opțiuni premium cu dronă.',
+          en: 'A complete photo and video experience, with a coordinated team, unified visual style, and premium drone options.',
         },
-        deliverables: {
-          ro: [
-            'Fotografie interior/exterior',
-            'Imagini aeriene cu dronă',
-            'Tour virtual 360°',
-            'Licență comercială',
-          ],
-          en: [
-            'Interior/exterior photography',
-            'Aerial drone imagery',
-            '360° virtual tour',
-            'Commercial license',
-          ],
-        },
+        deliverables: { ro: [], en: [] },
       },
     ],
     editorial: {
