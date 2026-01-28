@@ -9,7 +9,7 @@ export function About() {
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
 
   return (
-    <section ref={sectionRef} id="about" className="section-padding bg-background relative overflow-hidden">
+    <section ref={sectionRef} id="despre" className="section-padding bg-background relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-1/2 left-0 w-px h-32 bg-gradient-to-b from-transparent via-primary/30 to-transparent -translate-y-1/2" />
       <div className="absolute top-1/2 right-0 w-px h-32 bg-gradient-to-b from-transparent via-primary/30 to-transparent -translate-y-1/2" />

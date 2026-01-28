@@ -1,9 +1,8 @@
 import { useState, useEffect, type MouseEvent } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { content } from '@/data/content';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useScrollTo } from '@/hooks/useScrollTo';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import logoBlack from '@/assets/logo-black.png';
@@ -11,8 +10,8 @@ import logoWhite from '@/assets/logo-white.png';
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
-  const scrollTo = useScrollTo();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,15 +29,62 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Define navigation items with context-aware behavior
   const navItems = [
     { label: t(content.nav.portfolio), target: 'portfolio' },
     { label: t(content.nav.services), target: 'services' },
-    { label: t(content.nav.about), target: 'about' },
+    { label: t(content.nav.about), target: 'despre' },
     { label: t(content.nav.contact), target: 'contact' },
   ];
 
+  const scrollToTop = () => {
+    if (window.scrollY > 0) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const scrollToElement = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
   const handleNavClick = (target: string) => {
-    scrollTo(target);
+    const currentPath = location.pathname;
+
+    // Homepage navigation
+    if (currentPath === '/') {
+      scrollToElement(target);
+    }
+    // /servicii page navigation
+    else if (currentPath === '/servicii') {
+      if (target === 'portfolio') {
+        navigate('/portofoliu');
+      } else if (target === 'services') {
+        scrollToTop();
+      } else if (target === 'despre' || target === 'contact') {
+        navigate(`/#${target}`);
+      }
+    }
+    // /portofoliu page navigation
+    else if (currentPath === '/portofoliu') {
+      if (target === 'portfolio') {
+        scrollToTop();
+      } else if (target === 'services') {
+        navigate('/servicii');
+      } else if (target === 'despre' || target === 'contact') {
+        navigate(`/#${target}`);
+      }
+    }
+    // Default: navigate to homepage section
+    else {
+      navigate(`/#${target}`);
+    }
+
     setIsMobileMenuOpen(false);
   };
 
@@ -60,8 +106,8 @@ export function Header() {
       <div className="container-wide">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            to="/"
+          <button
+            onClick={() => navigate('/')}
             className="hover:opacity-80 transition-opacity duration-250"
           >
             <img 
@@ -69,7 +115,7 @@ export function Header() {
               alt="Flambart" 
               className="h-10 md:h-12 w-auto transition-opacity duration-300"
             />
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
