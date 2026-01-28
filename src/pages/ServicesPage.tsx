@@ -192,13 +192,13 @@ const pageContent = {
       en: 'Proven experience · Coordinated team · Premium delivery',
     },
   },
-  photographyInfo: {
+  {/*photographyInfo: {
     title: { ro: 'Servicii Integrate Foto + Video', en: 'Integrated Photo + Video Services' },
     body: {
       ro: 'Echipă dedicată, stil unitar (cinematic sau documentar), flux de lucru optim, cadre aeriene incluse și flexibilitate totală în alegerea stilului. Ideal pentru evenimente și proiecte unde coerența vizuală este esențială.',
       en: 'Dedicated team, unified style (cinematic or documentary), optimized workflow, aerial footage included, and full flexibility in choosing the visual approach. Ideal for projects where visual coherence is essential.',
     },
-  },
+  },*/}
   cta: {
     label: { ro: 'Solicită ofertă personalizată', en: 'Request a custom quote' },
   },
