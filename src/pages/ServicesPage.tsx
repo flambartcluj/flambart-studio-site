@@ -25,8 +25,8 @@ const serviceSections: ServiceSection[] = [
     id: 'integrated',
     title: { ro: 'Servicii Integrate Foto + Video', en: 'Integrated Photo + Video Services' },
     intro: {
-      ro: 'Echipă dedicată, stil unitar (cinematic sau documentar), flux de lucru optim, cadre aeriene incluse și flexibilitate totală în alegerea stilului. Ideal pentru evenimente și proiecte unde coerența vizuală este esențială.',
-      en: 'Dedicated team, unified style (cinematic or documentary), optimized workflow, aerial footage included, and full flexibility in choosing the visual approach. Ideal for projects where visual coherence is essential.',
+      ro: 'Echipă dedicată, stil unitar (cinematic sau documentar), flux de lucru optim, cadre aeriene incluse și flexibilitate totală în alegerea stilului. Ideal pentru evenimente și proiecte unde coerența vizuală este esențială.\n\nServiciile noastre foto-video transformă momentele speciale în amintiri memorabile, cu un mix perfect între creativitate și profesionalism. Surprindem momentele importante natural, cu atenție la lumină, detalii și emoțiile reale ale zilei.\n\nImaginile sunt atent editate și livrate digital, în galerie online securizată, ușor de accesat și de împărtășit.',
+      en: 'Dedicated team, unified style (cinematic or documentary), optimized workflow, aerial footage included, and full flexibility in choosing the visual approach. Ideal for projects where visual coherence is essential.\n\nOur photo-video services transform special moments into memorable keepsakes, with a perfect blend of creativity and professionalism. We capture important moments naturally, with attention to light, details, and the genuine emotions of the day.\n\nImages are carefully edited and delivered digitally, in a secure online gallery, easy to access and share.',
     },
     services: [],
   },
