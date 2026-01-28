@@ -18,7 +18,7 @@ const Index = () => {
   useEffect(() => {
     if (location.hash) {
       const elementId = location.hash.slice(1);
-      // Small delay to ensure DOM is ready
+      // Small delay to ensure DOM is fully rendered after route change
       setTimeout(() => {
         const element = document.getElementById(elementId);
         if (element) {
@@ -27,9 +27,12 @@ const Index = () => {
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
           window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
-      }, 100);
+      }, 150);
+    } else {
+      // Scroll to top when navigating to homepage without hash
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [location.hash]);
+  }, [location.hash, location.key]);
   return (
     <LanguageProvider defaultLanguage="ro">
       <div className="min-h-screen bg-background text-foreground">
