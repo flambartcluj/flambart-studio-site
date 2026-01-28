@@ -41,9 +41,20 @@ interface GalleryEmbedItem extends GalleryItemBase {
 // Union type for all gallery items
 export type GalleryItem = GalleryImageItem | GalleryVideoItem | GalleryEmbedItem;
 
+// Gallery configuration options
+export interface GalleryConfig {
+  showAltTextOverlay: boolean;
+}
+
 interface GalleryData {
+  config?: GalleryConfig;
   items: GalleryItem[];
 }
+
+// Default configuration
+const DEFAULT_CONFIG: GalleryConfig = {
+  showAltTextOverlay: false,
+};
 
 // Base path for gallery assets in the public folder
 const GALLERY_ASSETS_PATH = '/gallery-assets/';
@@ -117,6 +128,7 @@ export function getItemThumbnailUrl(item: GalleryItem): string {
 
 export function useGallery() {
   const [items, setItems] = useState<GalleryItem[]>([]);
+  const [config, setConfig] = useState<GalleryConfig>(DEFAULT_CONFIG);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -134,6 +146,7 @@ export function useGallery() {
         
         const data: GalleryData = await response.json();
         setItems(data.items);
+        setConfig({ ...DEFAULT_CONFIG, ...data.config });
       } catch (err) {
         console.error('Error loading gallery:', err);
         setError(err instanceof Error ? err.message : 'Failed to load gallery');
@@ -148,5 +161,5 @@ export function useGallery() {
   // Get featured items (max 18)
   const featuredItems = items.filter(item => item.featured === true).slice(0, 18);
 
-  return { items, featuredItems, isLoading, error };
+  return { items, featuredItems, config, isLoading, error };
 }
