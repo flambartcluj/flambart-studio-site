@@ -14,7 +14,7 @@ type SlideDirection = 'left' | 'right' | null;
 
 export function FeaturedPortfolio() {
   const { t, language } = useLanguage();
-  const { featuredItems, isLoading, error } = useGallery();
+  const { featuredItems, config, isLoading, error } = useGallery();
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
   const [slideDirection, setSlideDirection] = useState<SlideDirection>(null);
   const { ref: sectionRef, isVisible } = useAnimateOnScroll<HTMLElement>();
@@ -237,10 +237,12 @@ export function FeaturedPortfolio() {
                       )}
                     </div>
 
-                    {/* Caption */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-sm text-background font-medium">{item.alt[language]}</p>
-                    </div>
+                    {/* Caption - conditionally rendered based on config */}
+                    {config.showAltTextOverlay && (
+                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-sm text-background font-medium">{item.alt[language]}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -317,10 +319,12 @@ export function FeaturedPortfolio() {
           >
             {renderLightboxContent(lightboxItem)}
 
-            {/* Caption */}
-            <p className="text-center text-muted-foreground mt-4">
-              {lightboxItem.alt[language]}
-            </p>
+            {/* Caption - conditionally rendered based on config */}
+            {config.showAltTextOverlay && (
+              <p className="text-center text-muted-foreground mt-4">
+                {lightboxItem.alt[language]}
+              </p>
+            )}
           </div>
         </div>
       )}

@@ -126,6 +126,29 @@ The gallery uses a 2-level hierarchical category system with top-level groups an
 
 ---
 
+### Gallery Configuration
+
+The gallery supports global configuration options via the `config` object at the root of `gallery.json`:
+
+```json
+{
+  "config": {
+    "showAltTextOverlay": false
+  },
+  "items": [...]
+}
+```
+
+#### Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `showAltTextOverlay` | `boolean` | `false` | Controls whether alt text is displayed as a visual overlay on thumbnails and in the lightbox. When `false`, alt text is still applied to the `alt` attribute for SEO and accessibility, but hidden visually. Set to `true` to show captions on hover and in the lightbox. |
+
+**Note:** This setting applies consistently across all gallery views (homepage featured section, portfolio page masonry grid, mobile views, and lightbox captions).
+
+---
+
 ### Adding Gallery Items
 
 #### Required Fields

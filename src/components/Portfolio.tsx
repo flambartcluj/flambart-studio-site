@@ -18,7 +18,7 @@ type SlideDirection = 'left' | 'right' | null;
 
 export function Portfolio() {
   const { t, language } = useLanguage();
-  const { items: galleryItems, isLoading, error } = useGallery();
+  const { items: galleryItems, config, isLoading, error } = useGallery();
   const [activeGroup, setActiveGroup] = useState<string>('all');
   const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
   const [mediaTypeFilter, setMediaTypeFilter] = useState<MediaTypeFilter>('all');
@@ -374,10 +374,12 @@ export function Portfolio() {
                     )}
                   </div>
 
-                  {/* Caption */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-sm text-background font-medium">{item.alt[language]}</p>
-                  </div>
+                  {/* Caption - conditionally rendered based on config */}
+                  {config.showAltTextOverlay && (
+                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="text-sm text-background font-medium">{item.alt[language]}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -440,10 +442,12 @@ export function Portfolio() {
           >
             {renderLightboxContent(lightboxItem)}
 
-            {/* Caption */}
-            <p className="text-center text-muted-foreground mt-4">
-              {lightboxItem.alt[language]}
-            </p>
+            {/* Caption - conditionally rendered based on config */}
+            {config.showAltTextOverlay && (
+              <p className="text-center text-muted-foreground mt-4">
+                {lightboxItem.alt[language]}
+              </p>
+            )}
           </div>
         </div>
       )}

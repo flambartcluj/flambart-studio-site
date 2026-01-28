@@ -1,4 +1,7 @@
 {
+  "config": {
+    "showAltTextOverlay": false
+  },
   "items": [
     {
       "id": "wed-embed-001",
