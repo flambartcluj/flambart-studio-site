@@ -16,18 +16,31 @@ const Index = () => {
 
   // Handle hash navigation (e.g., /#despre, /#contact)
   useEffect(() => {
-    if (location.hash) {
-      const elementId = location.hash.slice(1);
-      // Small delay to ensure DOM is fully rendered after route change
-      setTimeout(() => {
+    const scrollToHash = () => {
+      if (location.hash) {
+        const elementId = location.hash.slice(1);
         const element = document.getElementById(elementId);
         if (element) {
           const headerOffset = 80;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
           window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          return true;
         }
-      }, 150);
+        return false;
+      }
+      return true;
+    };
+
+    if (location.hash) {
+      // Try immediately first
+      if (!scrollToHash()) {
+        // If element not found, retry with delays to handle cross-page navigation
+        const attempts = [50, 150, 300, 500];
+        attempts.forEach((delay) => {
+          setTimeout(scrollToHash, delay);
+        });
+      }
     } else {
       // Scroll to top when navigating to homepage without hash
       window.scrollTo({ top: 0, behavior: 'smooth' });
