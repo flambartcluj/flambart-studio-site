@@ -8,8 +8,7 @@
       "alt": { "ro": "Video de nuntă – weddings", "en": "Wedding video – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "wed-embed-002",
@@ -82,7 +81,8 @@
       "alt": { "ro": "Fotografie nuntă – nunți", "en": "Wedding photography – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "wed-wedding-008",
@@ -172,7 +172,8 @@
       "alt": { "ro": "Fotografie nuntă – nunți", "en": "Wedding photography – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "wed-wedding-018",
@@ -361,7 +362,8 @@
       "alt": { "ro": "Fotografie nuntă – nunți", "en": "Wedding photography – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "landscape"
+      "aspectRatio": "landscape",
+      "featured": true
     },
     {
       "id": "wed-wedding-039",
@@ -722,7 +724,8 @@
       "alt": { "ro": "Fotografie nuntă – nunți", "en": "Wedding photography – weddings" },
       "category": "weddings",
       "subCategory": "wedding",
-      "aspectRatio": "landscape"
+      "aspectRatio": "landscape",
+      "featured": true
     },
     {
       "id": "wed-wedding-079",
@@ -749,8 +752,7 @@
       "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
       "category": "weddings",
       "subCategory": "civil",
-      "aspectRatio": "portrait",
-      "featured": true
+      "aspectRatio": "portrait"
     },
     {
       "id": "wed-civil-002",
@@ -885,7 +887,8 @@
       "alt": { "ro": "Fotografie stare civilă – nunți", "en": "Civil ceremony photography – weddings" },
       "category": "weddings",
       "subCategory": "civil",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "wed-civil-017",
@@ -1245,8 +1248,7 @@
       "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
       "category": "weddings",
       "subCategory": "save-the-date",
-      "aspectRatio": "portrait",
-      "featured": true
+      "aspectRatio": "portrait"
     },
     {
       "id": "wed-std-002",
@@ -1273,7 +1275,8 @@
       "alt": { "ro": "Fotografie save the date – nunți", "en": "Save the date photography – weddings" },
       "category": "weddings",
       "subCategory": "save-the-date",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "wed-std-005",
@@ -1354,8 +1357,7 @@
       "alt": { "ro": "Fotografie botez – alte evenimente", "en": "Baptism photography – other events" },
       "category": "baptisms",
       "subCategory": "baptism",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "bap-baptism-002",
@@ -1598,7 +1600,8 @@
       "alt": { "ro": "Fotografie botez – alte evenimente", "en": "Baptism photography – other events" },
       "category": "baptisms",
       "subCategory": "baptism",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "bap-baptism-029",
@@ -1985,8 +1988,7 @@
       "alt": { "ro": "Fotografie majorat – alte evenimente", "en": "Coming of age photography – other events" },
       "category": "baptisms",
       "subCategory": "coming-of-age",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "bap-coming-002",
@@ -2400,8 +2402,7 @@
       "alt": { "ro": "Fotografie aniversare – alte evenimente", "en": "Anniversary photography – other events" },
       "category": "baptisms",
       "subCategory": "anniversary",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "bap-anniv-002",
@@ -2518,8 +2519,7 @@
       "alt": { "ro": "Fotografie portret – ședințe personale", "en": "Portrait photography – personal sessions" },
       "category": "portraits",
       "subCategory": "portrait",
-      "aspectRatio": "portrait",
-      "featured": true
+      "aspectRatio": "portrait"
     },
     {
       "id": "por-portrait-002",
@@ -2573,8 +2573,7 @@
       "alt": { "ro": "Fotografie cuplu – ședințe personale", "en": "Couple photography – personal sessions" },
       "category": "portraits",
       "subCategory": "couple",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "por-couple-002",
@@ -2610,8 +2609,7 @@
       "alt": { "ro": "Fotografie familie – ședințe personale", "en": "Family photography – personal sessions" },
       "category": "portraits",
       "subCategory": "family",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "por-family-002",
@@ -2701,8 +2699,7 @@
       "alt": { "ro": "Fotografie baby – ședințe personale", "en": "Baby photography – personal sessions" },
       "category": "portraits",
       "subCategory": "baby",
-      "aspectRatio": "portrait",
-      "featured": true
+      "aspectRatio": "portrait"
     },
     {
       "id": "por-baby-002",
@@ -2828,8 +2825,7 @@
       "alt": { "ro": "Ședință tematică – ședințe personale", "en": "Themed session photography – personal sessions" },
       "category": "portraits",
       "subCategory": "themed-sessions",
-      "aspectRatio": "portrait",
-      "featured": true
+      "aspectRatio": "portrait"
     },
     {
       "id": "por-themed-002",
@@ -3018,8 +3014,7 @@
       "alt": { "ro": "Fotografie corporate echipe – business", "en": "Corporate team photography – business" },
       "category": "corporate",
       "subCategory": "portraits-teams",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "cor-teams-002",
@@ -3271,8 +3266,7 @@
       "alt": { "ro": "Fotografie business branding – business", "en": "Business branding photography – business" },
       "category": "corporate",
       "subCategory": "business-branding",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "cor-branding-002",
@@ -3299,7 +3293,8 @@
       "alt": { "ro": "Fotografie business branding – business", "en": "Business branding photography – business" },
       "category": "corporate",
       "subCategory": "business-branding",
-      "aspectRatio": "portrait"
+      "aspectRatio": "portrait",
+      "featured": true
     },
     {
       "id": "cor-branding-005",
@@ -3677,8 +3672,7 @@
       "alt": { "ro": "Fotografie imobiliară – arhitectură", "en": "Real estate photography – architecture" },
       "category": "architecture",
       "subCategory": "real-estate",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "arc-realestate-002",
@@ -3840,8 +3834,7 @@
       "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
       "category": "architecture",
       "subCategory": "aerial",
-      "aspectRatio": "landscape",
-      "featured": true
+      "aspectRatio": "landscape"
     },
     {
       "id": "arc-aerial-002",
@@ -3958,7 +3951,8 @@
       "alt": { "ro": "Fotografie aeriană – arhitectură", "en": "Aerial photography – architecture" },
       "category": "architecture",
       "subCategory": "aerial",
-      "aspectRatio": "landscape"
+      "aspectRatio": "landscape",
+      "featured": true
     },
     {
       "id": "arc-aerial-015",
