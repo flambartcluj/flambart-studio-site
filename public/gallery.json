@@ -18,9 +18,9 @@
       "type": "embed",
       "provider": "other",
       "embedUrl": "https://kuula.co/share/L7cvx?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1",
-      "alt": { "ro": "Tur video 360° nuntă – weddings", "en": "360° wedding video tour – weddings" },
-      "category": "weddings",
-      "subCategory": "wedding",
+      "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
+      "category": "architecture",
+      "subCategory": "virtual-tours",
       "aspectRatio": "landscape"
     },
     {
@@ -4238,7 +4238,7 @@
       "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
       "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
       "category": "architecture",
-      "subCategory": "real-estate",
+      "subCategory": "virtual-tours",
       "aspectRatio": "landscape"
     },
     {
@@ -4249,7 +4249,7 @@
       "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
       "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
       "category": "architecture",
-      "subCategory": "real-estate",
+      "subCategory": "virtual-tours",
       "aspectRatio": "landscape"
     },
     {
@@ -4260,7 +4260,7 @@
       "thumbnail": "architecture/real-estate/360-tour-thumbnail.jpg",
       "alt": { "ro": "Tur virtual 360° Imobiliar", "en": "360° Real estate virtual tour" },
       "category": "architecture",
-      "subCategory": "real-estate",
+      "subCategory": "virtual-tours",
       "aspectRatio": "landscape"
     }
   ]
