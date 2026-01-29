@@ -4041,16 +4041,6 @@
       "aspectRatio": "landscape"
     },
     {
-      "id": "wed-embed-003",
-      "type": "embed",
-      "provider": "youtube",
-      "videoId": "2rMCEPT6Xlc",
-      "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
-      "category": "weddings",
-      "subCategory": "wedding",
-      "aspectRatio": "landscape"
-    },
-    {
       "id": "wed-embed-004",
       "type": "embed",
       "provider": "youtube",
@@ -4064,7 +4054,7 @@
       "id": "wed-embed-005",
       "type": "embed",
       "provider": "youtube",
-      "videoId": "blZmwb1Z68w",
+      "videoId": "bIZmwb1Z68w",
       "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
       "category": "weddings",
       "subCategory": "wedding",
@@ -4094,7 +4084,7 @@
       "id": "wed-std-vid-002",
       "type": "embed",
       "provider": "youtube",
-      "videoId": "VFxfwv1aWVM",
+      "videoId": "VFxfwy1JaWM",
       "alt": { "ro": "Video Save the date", "en": "Save the date video" },
       "category": "weddings",
       "subCategory": "save-the-date",
@@ -4104,7 +4094,7 @@
       "id": "wed-embed-007",
       "type": "embed",
       "provider": "youtube",
-      "videoId": "qlN5W4ZW4xA",
+      "videoId": "qIN5W4ZW4xA",
       "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
       "category": "weddings",
       "subCategory": "wedding",
@@ -4148,16 +4138,6 @@
       "alt": { "ro": "Video Business Branding", "en": "Business Branding video" },
       "category": "corporate",
       "subCategory": "business-branding",
-      "aspectRatio": "landscape"
-    },
-    {
-      "id": "event-majorat-vid-002",
-      "type": "embed",
-      "provider": "youtube",
-      "videoId": "5EGyQOUTN4A",
-      "alt": { "ro": "Video Majorat", "en": "Coming of age video" },
-      "category": "baptisms",
-      "subCategory": "coming-of-age",
       "aspectRatio": "landscape"
     },
     {
@@ -4214,7 +4194,7 @@
       "id": "wed-embed-010",
       "type": "embed",
       "provider": "youtube",
-      "videoId": "2BkI-WZtnKE",
+      "videoId": "2Bkl-WZtnKE",
       "alt": { "ro": "Video Nuntă", "en": "Wedding video" },
       "category": "weddings",
       "subCategory": "wedding",
