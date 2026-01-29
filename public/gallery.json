@@ -2405,7 +2405,7 @@
       "alt": { "ro": "Fotografie aniversare – alte evenimente", "en": "Anniversary photography – other events" },
       "category": "baptisms",
       "subCategory": "anniversary",
-      "aspectRatio": "landscape"
+      "aspectRatio": "portrait"
     },
     {
       "id": "bap-anniv-002",
@@ -2414,7 +2414,7 @@
       "alt": { "ro": "Fotografie aniversare – alte evenimente", "en": "Anniversary photography – other events" },
       "category": "baptisms",
       "subCategory": "anniversary",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
       "id": "bap-anniv-003",
@@ -2504,7 +2504,7 @@
       "alt": { "ro": "Fotografie aniversare – alte evenimente", "en": "Anniversary photography – other events" },
       "category": "baptisms",
       "subCategory": "anniversary",
-      "aspectRatio": "portrait"
+      "aspectRatio": "landscape"
     },
     {
       "id": "bap-anniv-013",
