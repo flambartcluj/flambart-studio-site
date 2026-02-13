@@ -2839,42 +2839,6 @@
       "aspectRatio": "landscape"
     },
     {
-      "id": "por-themed-004",
-      "type": "image",
-      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0004.jpg",
-      "alt": { "ro": "Ședință tematică – ședințe personale", "en": "Themed session photography – personal sessions" },
-      "category": "portraits",
-      "subCategory": "themed-sessions",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "por-themed-005",
-      "type": "image",
-      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0005.jpg",
-      "alt": { "ro": "Ședință tematică – ședințe personale", "en": "Themed session photography – personal sessions" },
-      "category": "portraits",
-      "subCategory": "themed-sessions",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "por-themed-006",
-      "type": "image",
-      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0006.jpg",
-      "alt": { "ro": "Ședință tematică – ședințe personale", "en": "Themed session photography – personal sessions" },
-      "category": "portraits",
-      "subCategory": "themed-sessions",
-      "aspectRatio": "portrait"
-    },
-    {
-      "id": "por-themed-007",
-      "type": "image",
-      "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0007.jpg",
-      "alt": { "ro": "Ședință tematică – ședințe personale", "en": "Themed session photography – personal sessions" },
-      "category": "portraits",
-      "subCategory": "themed-sessions",
-      "aspectRatio": "portrait"
-    },
-    {
       "id": "por-themed-008",
       "type": "image",
       "filename": "portraits/themed-sessions/fotograf_tematic_craciun_studio_cluj_0008.jpg",
